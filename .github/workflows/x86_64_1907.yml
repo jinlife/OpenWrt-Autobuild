@@ -1,9 +1,14 @@
-name: X86-64
+name: x86-64_1907
 
 on:
   repository_dispatch:
     types: X86-64
   workflow_dispatch:
+
+env:
+  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_TAG: v19.07.7
+  DIY_SH: x86-64_customize_packages_1907.sh
 
 jobs:
   build:
@@ -34,8 +39,6 @@ jobs:
     - name: Clone OpenWrt
       id: co
       run: |
-        REPO_URL=https://github.com/openwrt/openwrt
-        REPO_TAG=v21.02.0-rc3
         git clone -b $REPO_TAG $REPO_URL openwrt
         name_tag=${REPO_TAG}-r$(date +%g.%j)
         echo ::set-output name=release_tag::$name_tag
@@ -43,14 +46,14 @@ jobs:
     - name: Feeds update
       working-directory: ./openwrt
       run: |
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        ./scripts/feeds clean
+        ./scripts/feeds update -a && ./scripts/feeds install -a
 
     - name: Customize Packages
       working-directory: ./openwrt
       run: |
-        cp ../scripts/x86-64_customize_packages.sh .
-        /bin/bash x86-64_customize_packages.sh
+        cp ../scripts/$DIY_SH .
+        /bin/bash $DIY_SH
 
     - name: Convert Translation
       working-directory: ./openwrt

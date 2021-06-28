@@ -25,6 +25,9 @@ msgstr "闪存大小"
 msgid "Free Memory"
 msgstr "释放内存"
 
+msgid "Release Ram"
+msgstr "释放内存"
+
 msgid "RUNNING"
 msgstr "运行中"
 
@@ -229,3 +232,319 @@ msgstr "秒。"
 
 msgid "upflow:"
 msgstr "上传："
+
+msgid "PowerOff"
+msgstr "关机"
+
+msgid "Shut down your router"
+msgstr "吹灯拔蜡，关机回家"
+
+msgid "Perform PowerOff"
+msgstr "关机，走你~"
+
+msgid "Warning: There are unsaved changes that will get lost on shutting down!"
+msgstr "警告：没保存的改动在关机的时候都会丢失！别惊讶，要么保存，要么放弃"
+
+msgid "Waiting for device..."
+msgstr "设备有点懵，要等一下..."
+
+msgid "Router is shutting down..."
+msgstr "正在关机，说啥也不好使了..."
+
+msgid "Socat"
+msgstr "端口转发"
+
+msgid "Socat is a versatile networking tool named after 'Socket CAT', which can be regarded as an N-fold enhanced version of NetCat"
+msgstr "Socat 是 Linux 下的一个多功能的网络工具，名字来由是「Socket CAT」。其功能与有瑞士军刀之称的 Netcat 类似，可以看做是 Netcat 的加强版。"
+
+msgid "Socat Config"
+msgstr "Socat 配置"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Remarks"
+msgstr "备注"
+
+msgid "Protocol"
+msgstr "协议"
+
+msgid "IPv6 Only"
+msgstr "仅IPv6"
+
+msgid "When checked, only IPv6 ports are listen for, otherwise IPv4 will also be listened for."
+msgstr "当勾选时，仅监听IPv6，否则将会同时监听IPv4。"
+
+msgid "Port Forwards"
+msgstr "端口转发"
+
+msgid "Listen Protocol"
+msgstr "监听协议"
+
+msgid "Listen port"
+msgstr "监听端口"
+
+msgid "Bind to a port local"
+msgstr "绑定到本地端口"
+
+msgid "Destination Protocol"
+msgstr "目标协议"
+
+msgid "Destination address"
+msgstr "目标地址"
+
+msgid "Destination port"
+msgstr "目标端口"
+
+msgid "Open firewall port"
+msgstr "打开防火墙端口"
+
+msgid "Scheduled Reboot"
+msgstr "定时重启"
+
+msgid "Scheduled reboot Setting"
+msgstr "定时重启设置"
+
+msgid "Week Day"
+msgstr "星期"
+
+msgid "Everyday"
+msgstr "每天"
+
+msgid "Day"
+msgstr "天"
+
+msgid "Hour"
+msgstr "小时"
+
+msgid "Minute"
+msgstr "分钟"
+
+msgid "Choose local file:"
+msgstr "选择本地文件："
+
+msgid "Couldn't open file:"
+msgstr "无法打开文件："
+
+msgid "Create upload file error."
+msgstr "创建上传文件失败。"
+
+msgid "Download"
+msgstr "下载"
+
+msgid "Download file"
+msgstr "下载文件"
+
+msgid "File name"
+msgstr "文件名"
+
+msgid "File saved to"
+msgstr "文件保存到"
+
+msgid "FileTransfer"
+msgstr "文件传输"
+
+msgid "Install"
+msgstr "安装"
+
+msgid "Attributes"
+msgstr "属性"
+
+msgid "Modify time"
+msgstr "修改时间"
+
+msgid "No specify upload file."
+msgstr "未指定上传文件。"
+
+msgid "Path on Route:"
+msgstr "路由根目录："
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Upload"
+msgstr "上传"
+
+msgid "Upload file list"
+msgstr "上传文件列表"
+
+msgid "Upload file to '/tmp/upload/'"
+msgstr "将文件上传到'/tmp/upload/'"
+
+msgid "Internet Access Schedule Control"
+msgstr "上网时间控制"
+
+msgid "Access Schedule Control Settins"
+msgstr "设置客户端禁止访问互联网的时间"
+
+msgid "General switch"
+msgstr "开启/关闭"
+
+msgid "Strict Mode"
+msgstr "严格模式"
+
+msgid "Strict Mode will degrade CPU performance, but it can achieve better results"
+msgstr "严格模式会损耗部分CPU资源，但可以按照时间规则立即拦截数据包，效果更好"
+
+msgid "Client Rules"
+msgstr "客户端规则"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "MAC address (Computer Name)"
+msgstr "MAC 地址 (主机名)"
+
+msgid "Start time"
+msgstr "开始时间"
+
+msgid "End time"
+msgstr "结束时间"
+
+msgid "Mon"
+msgstr "一"
+
+msgid "Tue"
+msgstr "二"
+
+msgid "Wed"
+msgstr "三"
+
+msgid "Thu"
+msgstr "四"
+
+msgid "Fri"
+msgstr "五"
+
+msgid "Sat"
+msgstr "六"
+
+msgid "Sun"
+msgstr "日"
+
+msgid "IP/MAC Binding"
+msgstr "IP/MAC绑定"
+
+msgid "MAC Address"
+msgstr "MAC 地址"
+
+msgid "ARP is used to convert a network address (e.g. an IPv4 address) to a physical address such as a MAC address.Here you can add some static ARP binding rules."
+msgstr "ARP协议是用于实现网络地址到物理地址转换的协议。在这里，你可以设置静态ARP绑定规则。"
+
+msgid "Bidirectional mode"
+msgstr "双向模式"
+
+msgid "Bindings"
+msgstr "绑定"
+
+msgid "Device"
+msgstr "设备"
+
+msgid "Device Name"
+msgstr "设备名"
+
+msgid "Detected printers"
+msgstr "检测到的打印机"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "Printer Model"
+msgstr "打印机型号"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "TCP listener port."
+msgstr "TCP 监听端口。"
+
+msgid "enable"
+msgstr "启用"
+
+msgid "USB Printer Server"
+msgstr "USB 打印服务器"
+
+msgid "Specifies the interface to listen on."
+msgstr "指定要监听的接口。"
+
+msgid "NAS"
+msgstr "网络存储"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Configure Options"
+msgstr "配置选项"
+
+msgid "Configure the default values for luci-app-wrtbwmon."
+msgstr "配置luci-app-wrtbwmon的默认值。"
+
+msgid "Default More Columns"
+msgstr "默认显示更多列"
+
+msgid "Default Protocol"
+msgstr "默认协议"
+
+msgid "Default Refresh Interval"
+msgstr "默认刷新间隔"
+
+msgid "Downstream Bandwidth"
+msgstr "下行带宽"
+
+msgid "Downstream:"
+msgstr "下行："
+
+msgid "Grant access to LuCI app wrtbwmon"
+msgstr "授予访问LuCI应用程序wrtbwmon的权限"
+
+msgid "Hide MAC Addresses"
+msgstr "隐藏MAC地址"
+
+msgid "Keep running in the background"
+msgstr "保持后台运行"
+
+msgid "Loading configuration data..."
+msgstr "载入配置数据..."
+
+msgid "Multiple of Unit"
+msgstr "单位之间倍数"
+
+msgid "Protocol:"
+msgstr "协议："
+
+msgid "Saving configuration data..."
+msgstr "保存配置数据..."
+
+msgid "Show More Columns:"
+msgstr "显示更多列："
+
+msgid "Transfer Speed in Bits"
+msgstr "以bits显示传输速度"
+
+msgid "Unable to save %s: %s"
+msgstr "不能保存%s: %s"
+
+msgid "Upstream Bandwidth"
+msgstr "上传带宽"
+
+msgid "Upstream:"
+msgstr "上行"
+
+msgid "Use DSL Bandwidth"
+msgstr "使用DSL带宽"
+
+msgid ""
+"Shares multiple USB printers via TCP/IP.<br />"
+"When modified bingings, re-plug usb connectors to take effect.<br />"
+"This module requires kmod-usb-printer."
+msgstr ""
+"通过 TCP/IP 共享 USB 打印机。<br />修改设置后，请重新连接打印机以使设置生效。<br />"
+"此模块需要 kmod-usb-printer 支持。"
+
+

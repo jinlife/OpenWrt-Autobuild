@@ -1,11 +1,7 @@
 #### 支持机型
 
-[![X86-64](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/x86_64.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/x86_64.yml)
-[![NanoPi-R2S](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/r2s.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/r2s.yml)
-[![ZeroPi](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/zeropi.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/zeropi.yml)
-[![Phicomm-K3](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/k3.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/k3.yml)
-[![Phicomm-K2P](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/k2p.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/k2p.yml)
-[![MiWiFi-Mini](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/miwifi-mini.yml/badge.svg)](https://github.com/vgist/OpenWrt-Autobuild/actions/workflows/miwifi-mini.yml)
+[![X86-64_1907](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml)
+[![X86-64_2102](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_2102.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_2102.yml)
 
 #### 部分应用来源
 
@@ -15,43 +11,48 @@
 
 #### 特色及功能
 
-- Dropbear 打开 ECC 支持
+- Dropbear 关闭， 本人是Unraid建立Docker的Xray代理服务器，远程客户端SSL接入局域网功能。 Unraid可以在虚拟机界面输入SSH命令，更安全。
 - 已进入上游稳定分支的设备，只跟进稳定分支
 - 默认密码: 无
 - 依赖性不强的应用不考虑集成，有依赖问题再考虑
-- 弱鸡的 cpu，不考虑集成 golang 应用
+- 弱鸡的 cpu，不考虑集成 golang 应用， Xray需要去官网下载并上传到Passwall应用目录。
+- 只维护X86，同时编译19.07和21.02版本. （19.07版本耗更少的CPU，但是在局域网看视频会有花屏现象。所以现在一直用的21.02）
+- 支持 r8125 的螃蟹2.5G网卡
+- 只使用必要的路由相关功能，共享文件功能由Unraid宿主机实现。
+- 精简版本，大小只有180MB，可以在Unraid虚拟机直接挂载使用。 efi镜像用OMVF，普通镜像用SeaBIOS。
 
 #### 分支
 
-| 版本        |x86-64 |NanoPi R2S|ZeroPi |Phicomm K3|Phicomm K2P|MiWiFi-mini|
-|:-----------:|:-----:|:--------:|:-----:|:--------:|:---------:|:---------:|
-| 21.02.0-rc3 |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
+| 版本            |x86-64 |
+|:--------------:|:-----:|
+| 21.02.0-rc3    |&check;|
+| 19.07.7        |&check;|
 
 #### 第三方应用列表
 
-| 应用        |x86-64 |NanoPi R2S|ZeroPi |Phicomm K3|Phicomm K2P|MiWiFi-mini|
-|-------------|:-----:|:--------:|:-----:|:--------:|:---------:|:---------:|
-|AdGuard Home |&check;| &check;  |&check;| &check;  |           |           |
-| AutoCore    |&check;| &check;  |&check;| &check;  |           |           |
-| cpufreq     |       | &check;  |&check;|          |           |           |
-| DDNS        |&check;| &check;  |&check;| &check;  |           |           |
-|FullCone NAT |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
-| frpc        |&check;| &check;  |&check;| &check;  |           |           |
-| frps        |&check;| &check;  |&check;| &check;  |           |           |
-|IPv6 兼容助手|&check;| &check;  |&check;| &check;  | &check;   | &check;   |
-| IPSEC       |&check;| &check;  |&check;| &check;  |           |           |
-| MiniUPnP    |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
-| OpenClash   |&check;| &check;  |&check;| &check;  |           |           |
-| PassWall    |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| Server 酱   |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| usb 打印    |&check;| &check;  |&check;| &check;  |           | &check;   |
-| vlmcsd 服务 |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| Zerotier    |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| 定时重启    |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| 流量监控    |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-|上网时间控制 |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
-| 网络共享    |&check;| &check;  |&check;| &check;  |           | &check;   |
-| 文件传输    |&check;| &check;  |&check;| &check;  |           |           |
-| 迅雷快鸟    |&check;| &check;  |&check;| &check;  |           |           |
-| 应用过滤    |&check;| &check;  |&check;| &check;  |           |           |
-| 自动挂载    |&check;| &check;  |&check;| &check;  |           | &check;   |
+| 应用        |x86-64 |简介 |
+|-------------|:-----:|:-----:|
+|AdGuard Home |&check;|用于DNS过滤广告|
+| AutoCore    |&check;|显示CPU信息|
+| cpufreq     |       |X86用不着，CPU频率|
+| DDNS        |&check;|动态域名|
+|FullCone NAT |&check;|NAT转发|
+| frpc        |       |局域网穿透客户端|
+| frps        |       |局域网穿透服务器|
+|IPv6 兼容助手|&check;|IPV6|
+| IPSEC       |       |IPSec VPN服务器(iOS 和Andriod 原生客户端支持连接)|
+| MiniUPnP    |&check;|UPnP自动端口映射|
+| OpenClash   |       |科学上网|
+| PassWall    |&check;|科学上网|
+| Server 酱   |       |微信通知|
+| usb 打印    |&check;| USB打印|
+| vlmcsd 服务（KMS） |&check;| KMS激活Windows和Office|
+| Zerotier    |       |局域网穿透，服务器中转|
+| 定时重启    |&check;|定时重启Openwrt|
+| 流量监控    |&check;|客户端实时流量监控|
+|上网时间控制 |&check;|上网客户端时间控制|
+| 网络共享    |       |Samba共享目录|
+| 文件传输    |&check;|上传文件至Openwrt|
+| 迅雷快鸟    |&check;|迅雷快鸟可15元升级宽带速度|
+| 应用过滤    |       |手机应用过滤|
+| 自动挂载    |       |自动挂载USB硬盘|
