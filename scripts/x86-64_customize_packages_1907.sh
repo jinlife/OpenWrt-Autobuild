@@ -140,7 +140,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat package
 # svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/r8125 package/new/r8125
 cp -rf ../r8125 package/new/r8125
 
-# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/r8152 package/new/r8152
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/r8152 package/new/r8152
 
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
