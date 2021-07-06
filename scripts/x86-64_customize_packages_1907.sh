@@ -133,7 +133,7 @@ git clone -b master https://github.com/garypang13/luci-theme-edge.git package/ne
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
 # Socat IPv6 to IPv4
-svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat package/new/luci-app-socat
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat package/new/luci-app-socat
 
 # Add r8125 realtek network card driver
 # svn co https://github.com/Lienol/openwrt/branches/19.07/package/kernel/r8125 package/new/r8125
