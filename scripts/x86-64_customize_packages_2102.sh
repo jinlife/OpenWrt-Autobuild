@@ -45,7 +45,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/shadowsocksr-libev pa
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/new/v2ray-plugin
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/new/xray-core
 # Realtek RTL8811CU/RTL8821CU
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/ci package/new/rtl8821cu
 # Realtek RTL8812AU/21AU
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
 # Realtek 8812BU/8822BU
@@ -85,7 +85,7 @@ git clone -b master https://github.com/garypang13/luci-theme-edge.git package/ne
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
 # Socat IPv6 to IPv4
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat package/new/luci-app-socat
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat package/new/luci-app-socat
 
 # Add r8125 realtek network card driver
 # svn co https://github.com/Lienol/openwrt/branches/19.07/package/kernel/r8125 package/new/r8125
