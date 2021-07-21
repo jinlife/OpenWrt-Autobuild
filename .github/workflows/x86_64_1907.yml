@@ -76,12 +76,12 @@ jobs:
     - name: Make Download
       working-directory: ./openwrt
       run: |
-        make download -j$((`nproc`+1))
+        make download -j`nproc`
 
     - name: Compile OpenWrt
       working-directory: ./openwrt
       run: |
-        make -j$((`nproc`+1)) V=s || make -j1 V=s
+        make -j`nproc` V=s || make -j1 V=s
 
     - name: Assemble Artifact
       run: |
@@ -89,7 +89,7 @@ jobs:
         ls openwrt/bin/targets/x86/64/
         mv openwrt/bin/targets/x86/64 ./artifact
         pushd artifact
-        mv config.buildinfo x86-64_defconfig
+        cat config.buildinfo
         rm -rf packages *.bin *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums
         sha256sum * > x86-64.sha256sums
         popd
