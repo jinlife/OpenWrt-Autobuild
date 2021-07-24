@@ -95,7 +95,4 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/ne
 # xlnetacc
 git clone -b master https://github.com/garypang13/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
 
-# default settings and translation
-cp -rf ../default-settings package/new/learn-translate
-
 exit 0
