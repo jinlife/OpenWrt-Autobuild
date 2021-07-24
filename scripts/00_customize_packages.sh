@@ -93,7 +93,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/new/vlmcsd
 
 # xlnetacc
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-xlnetacc package/new/luci-app-xlnetacc
+git clone -b master https://github.com/garypang13/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
 
 # default settings and translation
 cp -rf ../default-settings package/new/learn-translate
