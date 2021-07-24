@@ -1,7 +1,7 @@
 #### 支持机型
 
 [![X86-64_1907](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml)
-[![X86-64_2102](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_2102.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_2102.yml)
+[![X86-64_2102](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml)
 
 #### 部分应用来源
 
