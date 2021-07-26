@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Edge Theme
-git clone -b master https://github.com/garypang13/luci-theme-edge.git package/new/luci-theme-edge
+git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
 
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
