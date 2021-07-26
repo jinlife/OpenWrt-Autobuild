@@ -93,6 +93,6 @@ ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/new/vlmcsd
 
 # xlnetacc
-git clone -b master https://github.com/garypang13/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
+git clone -b master https://github.com/kiddin9/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
 
 exit 0
