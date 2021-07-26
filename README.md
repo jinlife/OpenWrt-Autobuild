@@ -4,12 +4,14 @@
 
 #### 部分应用来源
 
+[![Official](https://img.shields.io/badge/Lede-Lean-orange.svg?style=flat&logo=appveyor)](https://github.com/openwrt/openwrt)
 [![coolsnowwolf](https://img.shields.io/badge/Lede-Lean-orange.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede)
 [![Lienol](https://img.shields.io/badge/OpenWrt-Lienol-orange.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt)
 [![CTCGFW](https://img.shields.io/badge/OpenWrt-CTCGFW-orange.svg?style=flat&logo=appveyor)](https://github.com/immortalwrt/immortalwrt)
 
 #### 特色及功能
 
+- 主要基于官方Openwrt库，添加常用的插件编译而成的精简版镜像。
 - Dropbear 关闭， 本人是Unraid建立Docker的Xray代理服务器，远程客户端SSL接入局域网功能。 Unraid可以在虚拟机界面输入SSH命令，更安全。
 - 已进入上游稳定分支的设备，只跟进稳定分支
 - 默认密码: 无
