@@ -1,6 +1,5 @@
 #### 支持机型
 
-[![X86-64_1907](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml)
 [![X86-64_2102](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml)
 
 #### 部分应用来源
@@ -16,7 +15,7 @@
 - 默认密码: 无
 - 依赖性不强的应用不考虑集成，有依赖问题再考虑
 - 弱鸡的 cpu，不考虑集成 golang 应用， Xray需要去官网下载并上传到Passwall应用目录。
-- 只维护X86，同时编译19.07和21.02版本. （19.07版本耗更少的CPU，但是在局域网看视频会有花屏现象。所以现在一直用的21.02）
+- 只维护X86，Openwrt 21.02版本. （19.07版本耗更少的CPU，但是在局域网看视频会有花屏现象。所以现在一直用的21.02）
 - 支持 r8125 的螃蟹2.5G网卡
 - 只使用必要的路由相关功能，共享文件功能由Unraid宿主机实现。
 - 精简版本，大小只有180MB，可以在Unraid虚拟机直接挂载使用。 efi镜像用OMVF，普通镜像用SeaBIOS。
@@ -26,7 +25,6 @@
 | 版本            |x86-64 |
 |:--------------:|:-----:|
 | 21.02.0-rc3    |&check;|
-| 19.07.7        |&check;|
 
 #### 第三方应用列表
 
