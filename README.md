@@ -45,7 +45,7 @@
 | Server 酱   |       |微信通知|
 | usb 打印    |&check;| USB打印|
 | vlmcsd 服务（KMS） |&check;| KMS激活Windows和Office|
-| Zerotier    |       |局域网穿透，服务器中转|
+| Zerotier    |       |局域网穿透|
 | 定时重启    |&check;|定时重启Openwrt|
 | 流量监控    |&check;|客户端实时流量监控|
 |上网时间控制 |&check;|上网客户端时间控制|
