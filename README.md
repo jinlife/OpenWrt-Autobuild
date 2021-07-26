@@ -4,7 +4,7 @@
 
 #### 部分应用来源
 
-[![Official](https://img.shields.io/badge/Lede-Lean-orange.svg?style=flat&logo=appveyor)](https://github.com/openwrt/openwrt)
+[![Official](https://img.shields.io/badge/Openwrt-Openwrt-orange.svg?style=flat&logo=appveyor)](https://github.com/openwrt/openwrt)
 [![coolsnowwolf](https://img.shields.io/badge/Lede-Lean-orange.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede)
 [![Lienol](https://img.shields.io/badge/OpenWrt-Lienol-orange.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt)
 [![CTCGFW](https://img.shields.io/badge/OpenWrt-CTCGFW-orange.svg?style=flat&logo=appveyor)](https://github.com/immortalwrt/immortalwrt)
