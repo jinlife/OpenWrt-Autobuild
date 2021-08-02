@@ -7,7 +7,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_TAG: v21.02.0-rc3
+  REPO_TAG: v21.02.0-rc4
   
 jobs:
   build:
