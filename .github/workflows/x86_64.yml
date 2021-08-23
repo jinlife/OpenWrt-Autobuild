@@ -39,7 +39,7 @@ jobs:
       id: co
       run: |
         git clone -b $REPO_TAG $REPO_URL openwrt
-        name_tag=${REPO_TAG}-r$(date +%g.%j)
+        name_tag=${REPO_TAG}
         echo ::set-output name=release_tag::$name_tag
 
     - name: Feeds update
@@ -92,7 +92,6 @@ jobs:
         pushd artifact
         cat config.buildinfo
         rm -rf packages *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums *.bin *-combined.img.gz
-        sha256sum * > x86-64.sha256sums
         popd
 
     - name: Upload Artifact
