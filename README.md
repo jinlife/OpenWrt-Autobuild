@@ -40,8 +40,8 @@
 |IPv6 兼容助手|&check;|IPV6|
 | IPSEC       |       |IPSec VPN服务器(iOS 和Andriod 原生客户端支持连接)|
 | MiniUPnP    |&check;|UPnP自动端口映射|
-| OpenClash   |       |科学上网|
-| PassWall    |&check;|科学上网|
+| OpenClash   |&check;|科学上网|
+| PassWall    |       |科学上网|
 | Server 酱   |       |微信通知|
 | usb 打印    |&check;| USB打印|
 | vlmcsd 服务（KMS） |&check;| KMS激活Windows和Office|
