@@ -65,15 +65,6 @@ git clone -b master --depth 1 --single-branch https://github.com/destan19/OpenAp
 # OpenClash
 git clone -b master --depth 1 --single-branch https://github.com/vernesong/OpenClash package/new/luci-app-openclash
 
-# PassWall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria package/new/hysteria
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/new/v2ray-core
-
 # Realtek RTL8811CU/RTL8821CU
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
 
@@ -93,13 +84,11 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-autorebo
 git clone -b master --depth 1 --single-branch https://github.com/tty228/luci-app-serverchan package/new/luci-app-serverchan
 
 # ShadowsocksR Plus+
+rm -rf ./feeds/packages/net/kcptun
+rm -rf ./feeds/packages/net/xray-core
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/new/luci-app-ssr-plus
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/new/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan package/new/trojan
-
-# Shared for PassWall and ShadowsocksR Plus+
-rm -rf ./feeds/packages/net/kcptun
-rm -rf ./feeds/packages/net/xray-core
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks package/new/dns2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks package/new/ipt2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks package/new/microsocks

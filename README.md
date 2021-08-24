@@ -36,7 +36,6 @@
 | IPSEC       |&check;| &check;  |&check;| &check;  |           |           |
 | MiniUPnP    |&check;| &check;  |&check;| &check;  | &check;   | &check;   |
 | OpenClash   |&check;| &check;  |&check;| &check;  |           |           |
-| PassWall    |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
 | Server 酱   |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
 | SSRP+       |&check;| &check;  |&check;| &check;  |  &check;  | &check;   |
 | usb 打印    |&check;| &check;  |&check;| &check;  |           | &check;   |
