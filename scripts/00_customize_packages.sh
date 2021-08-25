@@ -67,11 +67,11 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package
 svn co https://github.com/coolsnowwolf/packages/trunk/net/kcptun package/new/kcptun
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/new/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/tcping package/new/tcping
-#svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
-svn co https://github.com/fw876/helloworld/trunk/xray-plugin package/new/xray-plugin
+svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
+#svn co https://github.com/fw876/helloworld/trunk/xray-plugin package/new/xray-plugin
 svn co https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
-#svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/new/shadowsocks-rust
-#svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/new/shadowsocks-rust
+svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
 
 # Traffic Usage Monitor
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
