@@ -34,7 +34,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipv6-helper packa
 
 # PassWall
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
-svn co https://github.com/kiddin9/openwrt-trunk/luci-app-passwallpasswall package/new/luci-app-passwall
+svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria package/new/hysteria
