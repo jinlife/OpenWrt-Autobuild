@@ -88,12 +88,6 @@ ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/new/vlmcsd
 
 # xlnetacc
-git clone -b main --depth 1 --single-branch https://github.com/Beginner-Go/luci-app-xlnetacc package/new/luci-app-xlnetacc
-
-# Zerotier
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-zerotier package/new/luci-app-zerotier
-
-# default settings and translation
-cp -rf ../default-settings package/new/learn-translate
+git clone -b master https://github.com/kiddin9/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
 
 exit 0
