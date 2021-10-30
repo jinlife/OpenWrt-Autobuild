@@ -29,9 +29,6 @@ sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X86'" $
 # Customized name
 sed -i "s/OpenWrt /Jinlife build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
 
-# mbedtls
-cp -f ../patches/201-Camellia-block-cipher.patch package/libs/mbedtls/patches/
-
 echo '
 CONFIG_CRYPTO_CHACHA20_X86_64=y
 CONFIG_CRYPTO_POLY1305_X86_64=y

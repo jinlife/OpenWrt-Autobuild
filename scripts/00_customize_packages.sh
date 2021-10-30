@@ -23,7 +23,9 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-lib-fs packa
 # FullCone
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/fullconenat package/network/fullconenat
 wget -P target/linux/generic/hack-5.4/ https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
-patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
+pushd feeds/luci
+cat ../../../patches/fullconenat-luci.patch | git apply
+popd
 mkdir -p package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/package/network/config/firewall/patches/fullconenat.patch
 
@@ -63,7 +65,7 @@ svn co https://github.com/fw876/helloworld/trunk/trojan package/new/trojan
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
 svn co https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
 # building ssr-libev with libmbedtls
-patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.patch
+# patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.patch
 
 # Traffic Usage Monitor
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
