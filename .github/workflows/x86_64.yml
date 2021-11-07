@@ -37,7 +37,7 @@ jobs:
       id: co
       run: |
         REPO_URL=https://github.com/openwrt/openwrt
-        REPO_TAG=v21.02.1
+        REPO_TAG=v21.02.0
         git clone -b $REPO_TAG $REPO_URL openwrt
         name_tag=${REPO_TAG}-r$(date +%g.%j)
         echo ::set-output name=release_tag::$name_tag
@@ -71,7 +71,7 @@ jobs:
     - name: Make Config
       working-directory: ./openwrt
       run: |
-        cp ../config/x86-64_defconfig .config
+        cp ../x86-64_defconfig .config
         make defconfig
 
     - name: Make Download

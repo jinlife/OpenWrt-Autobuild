@@ -16,25 +16,16 @@ PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-# full IPv6 support with a DHCPv6 client: odhcp6c
-# RA & DHCPv6 Server: odhcpd-ipv6only
-# IPv6 firewall: ip6tables
-# Web interface to configure IPv6: luci-proto-ipv6
-# FullCone Nat: iptables-mod-fullconenat
-
 define Package/addition-default-settings
 	SECTION:=luci
 	CATEGORY:=LuCI
 	TITLE:=LuCI support for Default Settings
 	PKGARCH:=all
-	DEPENDS:=+ip6tables \
+	DEPENDS:=+dnsmasq-full \
 		+iptables-mod-fullconenat \
-		+libustream-wolfssl \
+		+kmod-tun \
 		+luci-compat \
-		+luci-proto-ipv6 \
-		+odhcp6c \
-		+odhcpd-ipv6only \
-		+zram-swap \
+		+luci-lib-ipkg \
 		+@LUCI_LANG_zh_Hans
 endef
 
