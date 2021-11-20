@@ -41,7 +41,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/n
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria package/new/hysteria
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/new/v2ray-core
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/new/v2ray-core
 
 # Realtek RTL8811CU/RTL8821CU
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
