@@ -28,8 +28,18 @@ patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
 mkdir -p package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/package/network/config/firewall/patches/fullconenat.patch
 
+# PassWall
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+#svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria package/new/hysteria
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/new/v2ray-core
+
 # OpenClash
-git clone -b master --depth 1 --single-branch https://github.com/vernesong/OpenClash package/new/luci-app-openclash
+# git clone -b master --depth 1 --single-branch https://github.com/vernesong/OpenClash package/new/luci-app-openclash
 
 # Realtek RTL8811CU/RTL8821CU
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
@@ -46,18 +56,16 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ramfree 
 # Scheduled Reboot
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-autoreboot package/new/luci-app-autoreboot
 
-# ShadowsocksR Plus+
+# Shared for PassWall and ShadowsocksR Plus+
 rm -rf ./feeds/packages/net/kcptun
 rm -rf ./feeds/packages/net/xray-core
 rm -rf ./feeds/packages/net/shadowsocks-libev
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/new/luci-app-ssr-plus
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/new/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks package/new/dns2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks package/new/ipt2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks package/new/microsocks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt package/new/pdnsd-alt
 svn co https://github.com/coolsnowwolf/packages/trunk/net/kcptun package/new/kcptun
-svn co https://github.com/coolsnowwolf/packages/trunk/net/shadowsocks-libev package/new/shadowsocks-libev
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/new/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/new/shadowsocks-rust
 svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
