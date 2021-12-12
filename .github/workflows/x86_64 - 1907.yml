@@ -55,8 +55,8 @@ jobs:
         cp ../scripts/x86-64_customization.sh .
         sed -i 's#config-5.4#config-4.14#g' x86-64_customization.sh
         /bin/bash x86-64_customization.sh
-        cp ../scripts/00_customize_packages.sh .        
-        /bin/bash 00_customize_packages.sh
+        cp ../scripts/00_customize_packages1907.sh .        
+        /bin/bash 00_customize_packages1907.sh
 
     - name: Convert Translation
       working-directory: ./openwrt
