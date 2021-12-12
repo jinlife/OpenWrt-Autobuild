@@ -51,15 +51,6 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/new/xray-core
 svn co https://github.com/coolsnowwolf/packages/trunk/net/shadowsocks-libev package/new/shadowsocks-libev
 
-# Realtek RTL8811CU/RTL8821CU
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
-
-# Realtek RTL8812AU/21AU
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
-
-# Realtek 8812BU/8822BU
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl88x2bu package/new/rtl88x2bu
-
 # Release Ram
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-ramfree package/new/luci-app-ramfree
 
