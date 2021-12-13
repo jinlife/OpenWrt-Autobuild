@@ -28,9 +28,9 @@ patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
 mkdir -p package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/package/network/config/firewall/patches/fullconenat.patch
 
-rm -rf feeds/packages/libs/libcap
+#rm -rf feeds/packages/libs/libcap
 rm -rf feeds/packages/libs/libcap-ng
-svn co https://github.com/openwrt/packages/branches/openwrt-19.07/libs/libcap feeds/packages/libs/libcap
+#svn co https://github.com/openwrt/packages/branches/openwrt-19.07/libs/libcap feeds/packages/libs/libcap
 svn co https://github.com/openwrt/packages/branches/openwrt-21.02/libs/libcap-ng feeds/packages/libs/libcap-ng
 
 # Passwall
