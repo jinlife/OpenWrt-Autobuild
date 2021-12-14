@@ -76,7 +76,7 @@ jobs:
         rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-21.02/lang/golang
         popd
         ./scripts/feeds install luci-app-passwall
-        cp ../config/x86-64_defconfig .config
+        cp ../config/x86-64_1907_defconfig .config
         make defconfig
 
     - name: Make Download
