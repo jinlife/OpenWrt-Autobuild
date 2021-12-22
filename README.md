@@ -1,5 +1,7 @@
 #### 支持机型
 
+[![X86-64_1907](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64_1907.yml)
+
 [![X86-64_2102](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml/badge.svg)](https://github.com/jinlife/OpenWrt-Autobuild/actions/workflows/x86_64.yml)
 
 #### 部分应用来源
@@ -14,7 +16,7 @@
 - 主要基于官方Openwrt稳定分支库，添加常用的插件编译而成的精简版镜像。
 - Dropbear 关闭， 本人是Unraid建立Docker的Xray代理服务器，远程客户端SSL接入局域网功能。 Unraid可以在虚拟机界面输入SSH命令，更安全。
 - 默认密码: 无
-- 只维护X86，Openwrt 21.02版本. （19.07版本耗更少的CPU，但是在局域网看视频会有花屏现象。所以现在一直用的21.02）
+- 只维护X86，Openwrt 19.07和21.02版本. （19.07版耗更少的CPU，21.02版更稳定）
 - 支持 r8125 的螃蟹2.5G网卡
 - 支持 r8152(r8156,r8156B) 的USB3.0螃蟹2.5G网卡
 - 只使用必要的路由相关功能，共享文件功能由Unraid宿主机实现。
@@ -24,6 +26,7 @@
 
 | 版本            |x86-64 |
 |:--------------:|:-----:|
+| 19.07.8|&check;|
 | 21.02.1|&check;|
 
 #### 第三方应用列表
