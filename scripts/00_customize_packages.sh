@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Access Control
-svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-accesscontrol feeds/luci/applications/luci-app-accesscontrol
-ln -sf ../../../feeds/luci/applications/luci-app-accesscontrol ./package/feeds/luci/luci-app-accesscontrol
-
-# AdGuard Home
-cp -rf ../luci-app-adguardhome package/new/luci-app-adguardhome
-#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
 
 # arpbind
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-arpbind package/new/luci-app-arpbind
@@ -33,18 +26,6 @@ wget -P target/linux/generic/hack-5.4/ https://github.com/immortalwrt/immortalwr
 patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
 mkdir -p package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/package/network/config/firewall/patches/fullconenat.patch
-
-# PassWall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
-#svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/new/v2ray-core
-
-# OpenClash
-# git clone -b master --depth 1 --single-branch https://github.com/vernesong/OpenClash package/new/luci-app-openclash
 
 # Realtek RTL8811CU/RTL8821CU
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/rtl8821cu package/new/rtl8821cu
