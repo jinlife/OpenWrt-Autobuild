@@ -5,8 +5,8 @@ svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/l
 ln -sf ../../../feeds/luci/applications/luci-app-accesscontrol ./package/feeds/luci/luci-app-accesscontrol
 
 # AdGuard Home
-# cp -rf ../luci-app-adguardhome package/new/luci-app-adguardhome
-#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
+# svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-adguardhome feeds/luci/applications/luci-app-adguardhome
+# ln -sf ../../../feeds/luci/applications/luci-app-adguardhome ./package/feeds/luci/luci-app-adguardhome
 
 # iKoolproxy
 git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
@@ -67,6 +67,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/ne
 # Shared for PassWall and ShadowsocksR Plus+
 rm -rf ./feeds/packages/net/kcptun
 rm -rf ./feeds/packages/net/xray-core
+rm -rf ./feeds/packages/net/shadowsocks-libev
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/dns2socks package/new/dns2socks
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ipt2socks package/new/ipt2socks
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/kcptun package/new/kcptun
@@ -77,7 +78,9 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/shadow
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/new/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/new/shadowsocks-rust
 svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/simple-obfs package/new/simple-obfs
 svn co https://github.com/fw876/helloworld/trunk/tcping package/new/tcping
+svn co https://github.com/fw876/helloworld/trunk/trojan package/new/trojan
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
 svn co https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
 # building ssr-libev with libmbedtls
