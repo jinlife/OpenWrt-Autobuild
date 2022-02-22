@@ -107,6 +107,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luc
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/vlmcsd package/new/vlmcsd
 
 # xlnetacc
-git clone -b master https://github.com/kiddin9/luci-app-xlnetacc.git package/new/luci-app-xlnetacc
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-xlnetacc feeds/luci/applications/luci-app-xlnetacc
+ln -sf ../../../feeds/luci/applications/luci-app-xlnetacc ./package/feeds/luci/luci-app-xlnetacc
 
 exit 0
