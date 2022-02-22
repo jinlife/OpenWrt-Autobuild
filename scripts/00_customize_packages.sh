@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Access Control
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-accesscontrol package/new/luci-app-accesscontrol
+
+# AdGuard Home
+cp -rf ../luci-app-adguardhome package/new/luci-app-adguardhome
+#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
+
+# iKoolproxy
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
 
 # arpbind
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-arpbind package/new/luci-app-arpbind
