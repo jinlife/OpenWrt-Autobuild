@@ -23,8 +23,6 @@ define Package/addition-default-settings
 	PKGARCH:=all
 	DEPENDS:=+dnsmasq-full \
 		+iptables-mod-fullconenat \
-		+kmod-tun \
-		+luci-compat \
 		+luci-lib-ipkg \
 		+@LUCI_LANG_zh_Hans
 endef

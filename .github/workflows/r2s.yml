@@ -1,8 +1,8 @@
-name: X86-64 Generic
+name: NanoPi R2S
 
 on:
   repository_dispatch:
-    types: X86-64
+    types: NanoPi-R2S
   workflow_dispatch:
 
 jobs:
@@ -40,20 +40,20 @@ jobs:
         REPO_TAG=v21.02.2
         git clone -b $REPO_TAG $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        name_tag=${REPO_TAG}-r$(date +%g.%j)
+        name_tag=${REPO_TAG}
         echo ::set-output name=release_tag::$name_tag
 
     - name: Feeds update
       working-directory: ./openwrt
       run: |
-        ./scripts/feeds clean
-        ./scripts/feeds update -a && ./scripts/feeds install -a
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
 
     - name: Customize Packages
       working-directory: ./openwrt
       run: |
-        cp ../scripts/x86-64_customization.sh .
-        /bin/bash x86-64_customization.sh
+        cp ../scripts/r2s_customization.sh .
+        /bin/bash r2s_customization.sh
         cp ../scripts/00_customize_packages.sh .
         /bin/bash 00_customize_packages.sh
 
@@ -74,11 +74,11 @@ jobs:
       with:
         ccache: 'true'
         prefix: ${{ github.workspace }}/openwrt
-        
+
     - name: Make Config
       working-directory: ./openwrt
       run: |
-        cp ../config/x86-64_defconfig .config
+        cp ../config/r2s_defconfig .config
         make defconfig
 
     - name: Make Download
@@ -93,12 +93,12 @@ jobs:
 
     - name: Assemble Artifact
       run: |
-        rm -rf ./artifact
-        ls openwrt/bin/targets/x86/64/
-        mv openwrt/bin/targets/x86/64 ./artifact
+        rm -rf ./artifact/
+        ls openwrt/bin/targets/rockchip/armv8/
+        mv openwrt/bin/targets/rockchip/armv8 ./artifact
         pushd artifact
         cat config.buildinfo
-        rm -rf packages *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums *.bin *-combined.img.gz
+        rm -rf packages *.buildinfo *.manifest sha256sums
         popd
 
     - name: Upload Artifact
