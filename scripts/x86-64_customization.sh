@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# xlnetacc
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-xlnetacc feeds/luci/applications/luci-app-xlnetacc
+ln -sf ../../../feeds/luci/applications/luci-app-xlnetacc ./package/feeds/luci/luci-app-xlnetacc
+
 # Edge Theme
 git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
 
