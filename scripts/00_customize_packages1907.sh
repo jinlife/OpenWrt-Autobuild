@@ -5,8 +5,8 @@ svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/l
 ln -sf ../../../feeds/luci/applications/luci-app-accesscontrol ./package/feeds/luci/luci-app-accesscontrol
 
 # AdGuard Home
-# cp -rf ../luci-app-adguardhome package/new/luci-app-adguardhome
-#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
+# svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-adguardhome feeds/luci/applications/luci-app-adguardhome
+# ln -sf ../../../feeds/luci/applications/luci-app-adguardhome ./package/feeds/luci/luci-app-adguardhome
 
 # iKoolproxy
 git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
