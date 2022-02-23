@@ -16,6 +16,8 @@ CONFIG_PACKAGE_bash=y
 # iKoolProxy
 CONFIG_PACKAGE_luci-app-ikoolproxy=n
 
+CONFIG_PACKAGE_icu-full-data70=y
+
 CONFIG_OPENSSL_OPTIMIZE_SPEED=y
 CONFIG_OPENSSL_WITH_SM234=y
 CONFIG_PACKAGE_addition-default-settings=y
