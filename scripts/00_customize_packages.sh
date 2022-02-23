@@ -100,6 +100,10 @@ svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 sed -i '/builddir dependencies/i\tools-y += ucl upx' tools/Makefile
 sed -i '/builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 
+# xlnetacc
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-xlnetacc feeds/luci/applications/luci-app-xlnetacc
+ln -sf ../../../feeds/luci/applications/luci-app-xlnetacc ./package/feeds/luci/luci-app-xlnetacc
+
 # USB Printer
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer feeds/luci/applications/luci-app-usb-printer
 ln -sf ../../../feeds/luci/applications/luci-app-usb-printer ./package/feeds/luci/luci-app-usb-printer
