@@ -16,10 +16,10 @@ CONFIG_PACKAGE_bash=y
 # iKoolProxy
 CONFIG_PACKAGE_luci-app-ikoolproxy=n
 
-CONFIG_PACKAGE_icu-full-data70=y
-CONFIG_PACKAGE_libstdcpp6=y
-CONFIG_PACKAGE_libintl-full8=y
-CONFIG_PACKAGE_icu70=y
+#CONFIG_PACKAGE_icu-full-data70=y
+#CONFIG_PACKAGE_libstdcpp6=y
+#CONFIG_PACKAGE_libintl-full8=y
+#CONFIG_PACKAGE_icu70=y
 
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_docker=y
