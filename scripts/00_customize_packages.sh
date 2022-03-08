@@ -57,15 +57,15 @@ ln -sf ../../../feeds/luci/applications/luci-app-ramfree ./package/feeds/luci/lu
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-autoreboot feeds/luci/applications/luci-app-autoreboot
 ln -sf ../../../feeds/luci/applications/luci-app-autoreboot ./package/feeds/luci/luci-app-autoreboot
 
--# PassWall
+# Passwall
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 #svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-passwall package/new/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/chinadns-ng package/new/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/v2ray-core package/new/v2ray-core
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/brook package/new/brook
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/chinadns-ng package/new/chinadns-ng
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/trojan-go package/new/trojan-go
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/trojan-plus package/new/trojan-plus
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/v2ray-core package/new/v2ray-core
 
 # Shared for PassWall and ShadowsocksR Plus+
 rm -rf ./feeds/packages/net/kcptun
@@ -86,6 +86,7 @@ svn co https://github.com/fw876/helloworld/trunk/tcping package/new/tcping
 svn co https://github.com/fw876/helloworld/trunk/trojan package/new/trojan
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
 svn co https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
+
 # building ssr-libev with libmbedtls
 patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.patch
 

@@ -42,15 +42,14 @@ svn co https://github.com/openwrt/packages/trunk/libs/libcap-ng feeds/packages/l
 ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 
 # Passwall
--# PassWall
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 #svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-passwall package/new/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/chinadns-ng package/new/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/v2ray-core package/new/v2ray-core
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/brook package/new/brook
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/chinadns-ng package/new/chinadns-ng
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/trojan-go package/new/trojan-go
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/trojan-plus package/new/trojan-plus
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/v2ray-core package/new/v2ray-core
 
 # Shared for PassWall and ShadowsocksR Plus+
 rm -rf ./feeds/packages/net/kcptun
