@@ -42,27 +42,35 @@ svn co https://github.com/openwrt/packages/trunk/libs/libcap-ng feeds/packages/l
 ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 
 # Passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+-# PassWall
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+#svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-passwall package/new/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/brook package/new/brook
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/chinadns-ng package/new/chinadns-ng
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-go package/new/trojan-go
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/trojan-plus package/new/trojan-plus
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/packages/v2ray-core package/new/v2ray-core
+
+# Shared for PassWall and ShadowsocksR Plus+
 rm -rf ./feeds/packages/net/kcptun
-rm -rf ./feeds/packages/net/shadowsocks-libev
 rm -rf ./feeds/packages/net/xray-core
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/dns2socks package/new/dns2socks
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ipt2socks package/new/ipt2socks
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/kcptun package/new/kcptun
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/microsocks package/new/microsocks
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy package/new/naiveproxy
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/new/pdnsd
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/simple-obfs package/new/simple-obfs
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping package/new/tcping
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/shadowsocks-rust package/new/shadowsocks-rust
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/new/v2ray-plugin
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/new/xray-core
+rm -rf ./feeds/packages/net/shadowsocks-libev
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/dns2socks package/new/dns2socks
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ipt2socks package/new/ipt2socks
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/kcptun package/new/kcptun
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/microsocks package/new/microsocks
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/pdnsd-alt package/new/pdnsd-alt
+svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/redsocks2 package/new/redsocks2
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/shadowsocks-libev package/new/shadowsocks-libev
+svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/new/naiveproxy
+svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/new/shadowsocks-rust
+svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/new/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/simple-obfs package/new/simple-obfs
+svn co https://github.com/fw876/helloworld/trunk/tcping package/new/tcping
+svn co https://github.com/fw876/helloworld/trunk/trojan package/new/trojan
+svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
+svn co https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
 
 # Release Ram
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-ramfree feeds/luci/applications/luci-app-ramfree
