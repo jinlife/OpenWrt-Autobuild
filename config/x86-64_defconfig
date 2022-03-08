@@ -95,8 +95,6 @@ CONFIG_PACKAGE_luci-app-arpbind=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-ddns=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
-CONFIG_PACKAGE_luci-app-frpc=n
-CONFIG_PACKAGE_luci-app-frps=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 CONFIG_PACKAGE_luci-app-ksmbd=n
 CONFIG_PACKAGE_luci-app-oaf=n
@@ -114,14 +112,12 @@ CONFIG_PACKAGE_luci-app-ssr-plus=n
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs is not set
-CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-usb-printer=y
 CONFIG_PACKAGE_luci-app-vlmcsd=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_luci-app-xlnetacc=y
 CONFIG_PACKAGE_luci-app-zerotier=n
 CONFIG_PACKAGE_luci-theme-bootstrap=n
-# CONFIG_PACKAGE_miniupnpd is not set
 CONFIG_PACKAGE_miniupnpd-igdv1=y
 CONFIG_PACKAGE_open-vm-tools=n
 CONFIG_PACKAGE_wpad-basic-wolfssl=n

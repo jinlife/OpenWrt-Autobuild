@@ -20,6 +20,8 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package
 
 # automount
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/automount package/new/automount
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ntfs3-mount package/new/ntfs3-mount
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ntfs3-oot package/new/ntfs3-oot
 
 # cpufreq
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
@@ -89,10 +91,6 @@ patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.
 # Traffic Usage Monitor
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/luci-app-wrtbwmon package/new/luci-app-wrtbwmon
-
-# UPNP
-rm -rf ./feeds/packages/net/miniupnpd
-svn co https://github.com/openwrt/packages/trunk/net/miniupnpd feeds/packages/net/miniupnpd
 
 # upx & ucl
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl

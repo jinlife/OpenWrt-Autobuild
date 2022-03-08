@@ -23,6 +23,12 @@ define Package/addition-default-settings
 	PKGARCH:=all
 	DEPENDS:=+dnsmasq-full \
 		+iptables-mod-fullconenat \
+		+kmod-ipt-conntrack-extra \
+		+kmod-ipt-ipopt \
+		+kmod-ipt-raw \
+		+kmod-macvlan \
+		+libustream-wolfssl \
+		+luci \
 		+kmod-tun \
 		+luci-compat \
 		+luci-lib-ipkg \
