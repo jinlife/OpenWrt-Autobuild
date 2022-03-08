@@ -463,9 +463,9 @@ xlnetacc_retry(){
 		eval $1 $2 && break # 成功
 		[ $# -ge 4 -a $retry -ge $4 ] && break || let retry++ # 重试超时
 		case $lasterr in
-			-1)sleep 5s;;# 服务器未响应
+			-1)sleep 2m;;# 服务器未响应
 			-2)break;;# 严重错误
-			*)sleep 3s;;# 其它错误
+			*)sleep 2m;;# 其它错误
 		esac
 	done
 
@@ -555,7 +555,7 @@ xlnetacc_main(){
 		_http_cmd="curl -Lfs -m 5 --interface $_bind_ip"
 
 		# 注销快鸟帐号
-		xlnetacc_logout 3 && sleep 3s
+		xlnetacc_logout 3 && sleep 6s
 
 		# 登录快鸟帐号
 		while :;do
@@ -563,9 +563,9 @@ xlnetacc_main(){
 			swjsq_login
 			case $lasterr in
 				0)break;;# 登录成功
-				-1)sleep 5s;;# 服务器未响应
+				-1)sleep 2m;;# 服务器未响应
 				-2)return 7;;# cURL 参数解析错误
-				-3)sleep 3s;;# cURL 网络通信失败
+				-3)sleep 2m;;# cURL 网络通信失败
 				6)sleep 130m;;# 需要输入验证码
 				8)sleep 3m;;# 服务器系统维护
 				15)sleep 1s;;# 身份信息已失效
