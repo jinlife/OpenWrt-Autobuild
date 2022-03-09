@@ -98,7 +98,7 @@ git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/luci
 
 # UPNP
 rm -rf ./feeds/packages/net/miniupnpd
-svn co https://github.com/openwrt/packages/trunk/net/miniupnpd feeds/packages/net/miniupnpd
+svn co https://github.com/openwrt/packages/branches/openwrt-21.02/net/miniupnpd feeds/packages/net/miniupnpd
 
 # upx & ucl
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
