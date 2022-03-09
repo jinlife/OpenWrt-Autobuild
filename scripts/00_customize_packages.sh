@@ -19,9 +19,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-arpbind ./package/feeds/luci/lu
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/emortal/autocore package/new/autocore
 
 # automount
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/automount package/new/automount
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ntfs3-mount package/new/ntfs3-mount
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ntfs3-oot package/new/ntfs3-oot
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/emortal/automount package/new/automount
 
 # cpufreq
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
