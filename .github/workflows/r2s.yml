@@ -40,7 +40,7 @@ jobs:
         REPO_TAG=v21.02.2
         git clone -b $REPO_TAG $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        name_tag=${REPO_TAG}-r$(date +%g.%j)
+        name_tag=${REPO_TAG}-r2s-r$(date +%g.%j)
         echo ::set-output name=release_tag::$name_tag
 
     - name: Feeds update
