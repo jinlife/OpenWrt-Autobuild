@@ -45,6 +45,8 @@ ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 #svn co https://github.com/kiddin9/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-passwall package/new/luci-app-passwall
+ln -sf ../../../feeds/luci/applications/luci-app-passwall ./package/feeds/luci/luci-app-passwall
+
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/brook package/new/brook
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/chinadns-ng package/new/chinadns-ng
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/trojan-go package/new/trojan-go
