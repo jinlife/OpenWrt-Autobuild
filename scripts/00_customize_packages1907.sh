@@ -90,6 +90,8 @@ git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtb
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/luci-app-wrtbwmon package/new/luci-app-wrtbwmon
 
 # UPNP
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
 rm -rf ./feeds/packages/net/miniupnpd
 svn co https://github.com/openwrt/packages/branches/openwrt-21.02/net/miniupnpd feeds/packages/net/miniupnpd
 
