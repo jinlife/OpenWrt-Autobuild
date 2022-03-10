@@ -9,7 +9,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-accesscontrol ./package/feeds/l
 # ln -sf ../../../feeds/luci/applications/luci-app-adguardhome ./package/feeds/luci/luci-app-adguardhome
 
 # iKoolproxy
-git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
+git clone https://github.com/yaof-project/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
 
 # arpbind
 svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-arpbind feeds/luci/applications/luci-app-arpbind
