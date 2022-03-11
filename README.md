@@ -29,7 +29,7 @@
 | 19.07.8|&check;|
 | 21.02.1|&check;|
 
-R2S 是一个测试项目，所有的功能都是关的，只加了个Docker功能。测试能不能用Docker跑Asp.net core.
+R2S 是一个测试项目，所有的功能都是关的，只加了个Docker功能。测试能不能用Docker跑ARM版本的Asp.net core.
 https://blog.jinlife.com/index.php/archives/61/
 
 #### 第三方应用列表
