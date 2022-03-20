@@ -38,6 +38,15 @@ cp -v ../immortalwrt/target/linux/generic/hack-5.4/952-net-conntrack-events-supp
 patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
 cp -rv ../immortalwrt/package/network/config/firewall/patches package/network/config/firewall/
 
+# Realtek RTL8811CU/RTL8821CU
+cp -rv ../immortalwrt/package/kernel/rtl8821cu package/new/rtl8821cu
+
+# Realtek RTL8812AU/21AU
+cp -rv ../immortalwrt/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
+
+# Realtek 8812BU/8822BU
+cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
+
 # Release Ram
 svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-ramfree feeds/luci/applications/luci-app-ramfree
 ln -sf ../../../feeds/luci/applications/luci-app-ramfree ./package/feeds/luci/luci-app-ramfree
