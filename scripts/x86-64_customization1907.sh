@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm-rf ../immortalwrt
+
 # For 1907 passwall and miniupnp
 rm -rf feeds/packages/libs/libcap
 rm -rf feeds/packages/libs/libcap-ng
