@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Realtek RTL8811CU/RTL8821CU
+cp -rv ../immortalwrt/package/kernel/rtl8821cu package/new/rtl8821cu
+
+# Realtek RTL8812AU/21AU
+cp -rv ../immortalwrt/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
+
+# Realtek 8812BU/8822BU
+cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
+
 # Edge Theme
 git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
 
