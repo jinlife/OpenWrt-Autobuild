@@ -56,10 +56,10 @@ jobs:
     - name: Customize Packages
       working-directory: ./openwrt
       run: |
-        cp ../scripts/r2s_customization.sh .
-        /bin/bash r2s_customization.sh
         cp ../scripts/00_customize_packages.sh .
         /bin/bash 00_customize_packages.sh
+        cp ../scripts/r2s_customization.sh .
+        /bin/bash r2s_customization.sh
 
     - name: Convert Translation
       working-directory: ./openwrt
