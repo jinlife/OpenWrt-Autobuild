@@ -93,19 +93,16 @@ git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtb
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/luci-app-wrtbwmon package/new/luci-app-wrtbwmon
 
 # UPNP
+svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
 rm -rf ./feeds/packages/net/miniupnpd
-svn co https://github.com/openwrt/packages/branches/openwrt-21.02/net/miniupnpd feeds/packages/net/miniupnpd
+svn export https://github.com/openwrt/packages/branches/openwrt-21.02/net/miniupnpd feeds/packages/net/miniupnpd
 
 # upx & ucl
 svn export https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
 svn export https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 sed -i '/builddir dependencies/i\tools-y += ucl upx' tools/Makefile
 sed -i '/builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
-
-# xlnetacc
-#svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-xlnetacc feeds/luci/applications/luci-app-xlnetacc
-#ln -sf ../../../feeds/luci/applications/luci-app-xlnetacc ./package/feeds/luci/luci-app-xlnetacc
-cp -rf ../luci-app-xlnetacc package/new/luci-app-xlnetacc
 
 # USB Printer
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer feeds/luci/applications/luci-app-usb-printer
@@ -115,5 +112,8 @@ ln -sf ../../../feeds/luci/applications/luci-app-usb-printer ./package/feeds/luc
 svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-vlmcsd feeds/luci/applications/luci-app-vlmcsd
 ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luci-app-vlmcsd
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/vlmcsd package/new/vlmcsd
+
+# xlnetacc
+cp -rf ../luci-app-xlnetacc package/new/luci-app-xlnetacc
 
 exit 0
