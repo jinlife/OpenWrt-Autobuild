@@ -544,10 +544,17 @@
 			linkmode_clear_bit(nr, addr);
 	}
 
+// Ugly jump
+#if LINUX_VERSION_CODE > KERNEL_VERSION(4,14,0) && LINUX_VERSION_CODE < KERNEL_VERSION(4,15,0)
+	#define MDIO_EEE_2_5GT		0x0001	/* 2.5GT EEE cap */
+	goto Jump;
+#endif
 	static inline void skb_mark_not_on_list(struct sk_buff *skb)
 	{
 		skb->next = NULL;
 	}
+Jump:
+
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,0,0) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,4,0) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,6,0) */
