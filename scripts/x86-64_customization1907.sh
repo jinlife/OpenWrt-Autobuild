@@ -24,6 +24,7 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-socat packag
 cp -rf ../r8125 package/new/r8125
 
 #svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
+cp -rf ../r8152 package/new/r8152
 
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
