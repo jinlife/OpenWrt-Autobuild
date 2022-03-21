@@ -544,9 +544,11 @@
 			linkmode_clear_bit(nr, addr);
 	}
 
-// Ugly jump
-#if LINUX_VERSION_CODE > KERNEL_VERSION(4,14,0) && LINUX_VERSION_CODE < KERNEL_VERSION(4,15,0)
+// Ugly jump for 19.07 and Unraid 6.8
+#if LINUX_VERSION_CODE > KERNEL_VERSION(4,14,0) && LINUX_VERSION_CODE < KERNEL_VERSION(4,20,0)
 	#define MDIO_EEE_2_5GT		0x0001	/* 2.5GT EEE cap */
+	#define MDIO_AN_10GBT_CTRL_ADV2_5G	0x0080	/* Advertise 2.5GBASE-T */
+	#define MDIO_AN_10GBT_STAT_LP2_5G	0x0020  /* LP is 2.5GBT capable */
 	goto Jump;
 #endif
 	static inline void skb_mark_not_on_list(struct sk_buff *skb)
