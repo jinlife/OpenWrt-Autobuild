@@ -49,6 +49,11 @@ R8152_MAKEOPTS= -C $(PKG_BUILD_DIR) \
 		LDOPTS=" " \
 		DOMULTI=1
 
+define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
+	$(CP) ./src/* $(PKG_BUILD_DIR)
+endef
+
 define Build/Compile
 	+$(MAKE) $(PKG_JOBS) $(R8152_MAKEOPTS) modules
 endef
