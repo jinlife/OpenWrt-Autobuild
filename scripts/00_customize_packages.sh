@@ -123,10 +123,9 @@ cp -rf ../r8125 package/new/r8125
 
 #svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
 cp -rf ../r8152 package/new/r8152
-pushd package/new/r8152
-ls
-$PWD
-patch -d src -p1 -i patches/100-add-LED-configuration-from-OF.patch
+cp -rf package/new/r8152/patches/100-add-LED-configuration-from-OF.patch package/new/r8152/src
+pushd package/new/r8152/src
+git apply 100-add-LED-configuration-from-OF.patch && rm 0002-feeds-luci-Drop-uhttpd-depends.patch
 popd
 
 exit 0
