@@ -125,7 +125,7 @@ cp -rf ../r8125 package/new/r8125
 cp -rf ../r8152 package/new/r8152
 cp -rf package/new/r8152/patches/100-add-LED-configuration-from-OF.patch package/new/r8152/src
 pushd package/new/r8152/src
-git apply 100-add-LED-configuration-from-OF.patch && rm 0002-feeds-luci-Drop-uhttpd-depends.patch
+git apply 100-add-LED-configuration-from-OF.patch && rm 100-add-LED-configuration-from-OF.patch
 popd
 
 exit 0
