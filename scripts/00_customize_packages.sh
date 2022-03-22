@@ -127,6 +127,7 @@ cp -rf ../r8152 package/new/r8152
 cp -rf package/new/r8152/patches/100-add-LED-configuration-from-OF.patch package/new/r8152/src
 pushd package/new/r8152/src
 git apply 100-add-LED-configuration-from-OF.patch && rm 100-add-LED-configuration-from-OF.patch
+grep -rn "r8152_led_configuration" *
 popd
 
 exit 0
