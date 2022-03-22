@@ -107,4 +107,22 @@ svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/vl
 # xlnetacc
 cp -rf ../luci-app-xlnetacc package/new/luci-app-xlnetacc
 
+# Edge Theme
+git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
+
+# poweroff
+git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
+
+# Socat IPv6 to IPv4
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-socat package/new/luci-app-socat
+
+#svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
+cp -rf ../r8152 package/new/r8152
+patch -d package/new/r8152/src -p1 -i ../r8152/patches/100-add-LED-configuration-from-OF.patch
+
+# Add r8125 realtek network card driver
+# svn export https://github.com/Lienol/openwrt/branches/19.07/package/kernel/r8125 package/new/r8125
+# svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/r8125 package/new/r8125
+cp -rf ../r8125 package/new/r8125
+
 exit 0

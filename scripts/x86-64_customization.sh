@@ -9,21 +9,6 @@ cp -rv ../immortalwrt/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
 # Realtek 8812BU/8822BU
 cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
 
-# Edge Theme
-git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
-
-# poweroff
-git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
-# Socat IPv6 to IPv4
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-socat package/new/luci-app-socat
-
-# Add r8125 realtek network card driver
-# svn export https://github.com/Lienol/openwrt/branches/19.07/package/kernel/r8125 package/new/r8125
-# svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/r8125 package/new/r8125
-cp -rf ../r8125 package/new/r8125
-
-svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/r8152 package/new/r8152
-
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535

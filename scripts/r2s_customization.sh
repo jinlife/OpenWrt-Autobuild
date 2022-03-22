@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Edge Theme
-git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
-
-# poweroff
-git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
-
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
