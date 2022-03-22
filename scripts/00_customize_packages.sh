@@ -124,7 +124,9 @@ cp -rf ../r8125 package/new/r8125
 #svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
 cp -rf ../r8152 package/new/r8152
 pushd package/new/r8152
-patch -d package/new/r8152/src -p1 -i package/new/r8152/patches/100-add-LED-configuration-from-OF.patch
+ls
+$PWD
+patch -d src -p1 -i patches/100-add-LED-configuration-from-OF.patch
 popd
 
 exit 0
