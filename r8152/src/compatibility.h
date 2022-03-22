@@ -38,6 +38,11 @@
 	# define fallthrough                    do {} while (0)  /* fallthrough */
 	#endif
 
+	#define MDIO_EEE_2_5GT				0x0001	/* 2.5GT EEE cap */
+#if LINUX_VERSION_CODE < KERNEL_VERSION(5,1,0)
+	#define MDIO_AN_10GBT_CTRL_ADV2_5G		0x0080	/* Advertise 2.5GBASE-T */
+	#define MDIO_AN_10GBT_STAT_LP2_5G		0x0020  /* LP is 2.5GBT capable */
+
 #if LINUX_VERSION_CODE < KERNEL_VERSION(5,0,0)
 #if LINUX_VERSION_CODE < KERNEL_VERSION(4,20,0)
 #if LINUX_VERSION_CODE < KERNEL_VERSION(4,12,0)
@@ -544,20 +549,14 @@
 			linkmode_clear_bit(nr, addr);
 	}
 
-// Bypass for 19.07 and Unraid 6.8, otherwise, redefinition error for skb_mark_not_on_list
-// Macro come from https://github.com/torvalds/linux/blob/master/include/uapi/linux/mdio.h
-#if LINUX_VERSION_CODE > KERNEL_VERSION(4,14,0) && LINUX_VERSION_CODE < KERNEL_VERSION(4,20,0)
-	#define MDIO_EEE_2_5GT		0x0001	/* 2.5GT EEE cap */
-	#define MDIO_AN_10GBT_CTRL_ADV2_5G	0x0080	/* Advertise 2.5GBASE-T */
-	#define MDIO_AN_10GBT_STAT_LP2_5G	0x0020  /* LP is 2.5GBT capable */
-#else
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4,14,217) || LINUX_VERSION_CODE < KERNEL_VERSION(4,19,10)
 	static inline void skb_mark_not_on_list(struct sk_buff *skb)
 	{
 		skb->next = NULL;
 	}
-#endif
-
+#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(4,14,217) || LINUX_VERSION_CODE < KERNEL_VERSION(4,19,10) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,0,0) */
+#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,1,0) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,4,0) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,6,0) */
 #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(5,9,0) */
