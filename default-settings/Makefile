@@ -22,6 +22,7 @@ define Package/addition-default-settings
 	TITLE:=LuCI support for Default Settings
 	PKGARCH:=all
 	DEPENDS:=+dnsmasq-full \
+		+iptables-mod-fullconenat \
 		+kmod-ipt-conntrack-extra \
 		+kmod-ipt-ipopt \
 		+kmod-ipt-raw \
