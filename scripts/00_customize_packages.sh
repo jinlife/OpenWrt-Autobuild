@@ -17,7 +17,8 @@ svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applicatio
 ln -sf ../../../feeds/luci/applications/luci-app-arpbind ./package/feeds/luci/luci-app-arpbind
 
 # AutoCore
-cp -rv ../immortalwrt/package/emortal/autocore package/new/autocore
+#cp -rv ../immortalwrt/package/emortal/autocore package/new/autocore
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/autocore package/new/autocore
 
 # automount
 cp -rv ../immortalwrt/package/emortal/automount package/new/automount
