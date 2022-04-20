@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # AutoCore
-#cp -rf ../immortalwrt/package/emortal/autocore package/new/
-# grant getCPUUsage access
-#sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
-svn export -r 1572743ad6e3c60cb088e47c769c17269caf2b38 https://github.com/immortalwrt/luci/branches/openwrt-21.02/package/emortal/autocore package/new/autocore
+# Commits on Feb 19, 2022 https://github.com/immortalwrt/immortalwrt/tree/1572743ad6e3c60cb088e47c769c17269caf2b38/package/emortal/autocore
+cp -rf ../autocore package/new/autocore
 
 # For 1907 passwall and miniupnp
 rm -rf feeds/packages/libs/libcap
