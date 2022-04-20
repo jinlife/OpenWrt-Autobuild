@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# AutoCore
+cp -rf ../immortalwrt/package/emortal/autocore package/new/
+# grant getCPUUsage access
+sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
+
 # For 1907 passwall and miniupnp
 rm -rf feeds/packages/libs/libcap
 rm -rf feeds/packages/libs/libcap-ng

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# AutoCore
+cp -rf ../immortalwrt/package/emortal/autocore package/new/
+# grant getCPUUsage access
+sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
