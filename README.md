@@ -26,8 +26,8 @@
 
 | 版本            |x86-64 |
 |:--------------:|:-----:|
-| 19.07.9|&check;|
-| 21.02.2|&check;|
+| 19.07.10|&check;|
+| 21.02.3|&check;|
 
 R2S 是一个测试项目，所有的功能都是关的，只加了个Docker功能。测试能不能用Docker跑ARM版本的Asp.net core.
 https://blog.jinlife.com/index.php/archives/61/
@@ -37,6 +37,7 @@ https://blog.jinlife.com/index.php/archives/61/
 | 应用        |x86-64 |简介 |
 |-------------|:-----:|:-----:|
 |iKoolproxy |&check;|用于过滤广告|
+|ADBYBY Plus +|&check;|用于过滤广告|
 | AutoCore    |&check;|显示CPU信息|
 | cpufreq     |       |X86用不着，CPU频率|
 | DDNS        |&check;|动态域名|
