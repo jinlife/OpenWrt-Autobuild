@@ -37,7 +37,7 @@ https://blog.jinlife.com/index.php/archives/61/
 | 应用        |x86-64 |简介 |
 |-------------|:-----:|:-----:|
 |iKoolproxy |&check;|用于过滤广告|
-|ADBYBY Plus +|&check;|用于过滤广告|
+|ADBYBY Plus +|       |用于过滤广告|
 | AutoCore    |&check;|显示CPU信息|
 | cpufreq     |       |X86用不着，CPU频率|
 | DDNS        |&check;|动态域名|
