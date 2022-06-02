@@ -12,6 +12,10 @@ svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ad
 # iKoolproxy
 git clone https://github.com/yaof-project/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
 
+# turboacc
+svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
+ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/luci-app-turboacc
+
 # arpbind
 svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-arpbind feeds/luci/applications/luci-app-arpbind
 ln -sf ../../../feeds/luci/applications/luci-app-arpbind ./package/feeds/luci/luci-app-arpbind
@@ -44,7 +48,7 @@ svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applicatio
 ln -sf ../../../feeds/luci/applications/luci-app-autoreboot ./package/feeds/luci/luci-app-autoreboot
 
 # Passwall
-svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-passwall feeds/luci/applications/luci-app-passwall
+cp -rf ../luci-app-passwall feeds/luci/applications/luci-app-passwall
 ln -sf ../../../feeds/luci/applications/luci-app-passwall ./package/feeds/luci/luci-app-passwall
 
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/brook package/new/brook

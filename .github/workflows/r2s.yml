@@ -82,6 +82,10 @@ jobs:
     - name: Make Config
       working-directory: ./openwrt
       run: |
+        pushd feeds/packages/lang
+        rm -rf golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
+        popd
+        ./scripts/feeds install luci-app-passwall
         cp ../config/r2s_defconfig .config
         make defconfig
 
@@ -111,12 +115,12 @@ jobs:
         name: ${{ steps.co.outputs.release_tag }}
         path: artifact/*
 
-    - name: Upload Release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        draft: false
-        prerelease: true
-        tag_name: ${{ steps.co.outputs.release_tag }}
-        files: artifact/*
+    #- name: Upload Release
+    #  uses: softprops/action-gh-release@v1
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #  with:
+    #    draft: false
+    #    prerelease: true
+    #    tag_name: ${{ steps.co.outputs.release_tag }}
+    #    files: artifact/*
