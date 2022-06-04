@@ -13,12 +13,12 @@ svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ad
 git clone https://github.com/yaof-project/luci-app-ikoolproxy.git package/new/luci-app-ikoolproxy
 
 # turboacc
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
-svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
+patch -d feeds/luci/applications -p1 -i ../../../patches/luci-app-turboacc.patch
+#svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
 ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/luci-app-turboacc
 
 # https://github.com/imy7/luci-app-turboacc/tree/main/Lean
-#svn export  https://github.com/kiddin9/openwrt-packages/trunk/diy/patches package/new/patches
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/new/shortcut-fe
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsproxy package/new/dnsproxy
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/new/dnsforwarder
