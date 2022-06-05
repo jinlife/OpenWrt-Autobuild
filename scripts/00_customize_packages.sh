@@ -20,13 +20,14 @@ svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turb
 ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/luci-app-turboacc
 
 # Patch Kernel with SFE https://github.com/zxcvbnmv/zxcvbnm-openwrt/blob/master/scripts/02_r4s_prepare_package.sh
+# Openwrt 21.02
 pushd target/linux/generic/hack-5.4
 wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 popd
 
 # https://github.com/imy7/luci-app-turboacc/tree/main/Lean
-svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/lean/shortcut-fe
-svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/fast-classifier package/lean/fast-classifier
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/new/shortcut-fe
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/fast-classifier package/new/fast-classifier
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/kernel/shortcut-fe
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsproxy package/new/dnsproxy
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/new/dnsforwarder
