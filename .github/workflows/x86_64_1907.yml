@@ -103,11 +103,11 @@ jobs:
         rm -rf packages *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums *.bin *-combined.img.gz
         popd
 
-    #- name: Upload Artifact
-    #  uses: actions/upload-artifact@v2
-    #  with:
-    #    name: ${{ steps.co.outputs.release_tag }}
-    #    path: artifact/*
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.co.outputs.release_tag }}
+        path: artifact/*
 
     - name: Upload Release
       uses: softprops/action-gh-release@v1
