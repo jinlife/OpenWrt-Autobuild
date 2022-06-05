@@ -19,8 +19,7 @@ svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applicatio
 ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/luci-app-turboacc
 
 # https://github.com/imy7/luci-app-turboacc/tree/main/Lean
-cp -rv ../immortalwrt/package/kernel/shortcut-fe package/new/shortcut-fe
-cp -rv ../immortalwrt/package/kernel/fast-classifier package/new/fast-classifier
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/kernel/shortcut-fe
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/new/shortcut-fe
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsproxy package/new/dnsproxy
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/new/dnsforwarder
