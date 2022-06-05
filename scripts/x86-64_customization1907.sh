@@ -14,8 +14,10 @@ ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 
 # Openwrt 19.07
 pushd target/linux/generic/hack-4.14
-wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/952-net-conntrack-events-support-multiple-registrant.patch
-wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
+wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+#wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/952-net-conntrack-events-support-multiple-registrant.patch
+#wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 popd
 
 #Default IP
