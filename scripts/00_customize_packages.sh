@@ -19,6 +19,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/l
 # Patch Kernel with SFE https://github.com/zxcvbnmv/zxcvbnm-openwrt/blob/master/scripts/02_r4s_prepare_package.sh
 # Openwrt 21.02
 pushd target/linux/generic/hack-5.4
+wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
 wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 popd
 
