@@ -20,7 +20,7 @@ ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/l
 
 # https://github.com/imy7/luci-app-turboacc/tree/main/Lean
 cp -rv ../immortalwrt/package/kernel/shortcut-fe package/new/shortcut-fe
-cp -rv ../immortalwrt/package/kernel/shortcut-fe package/new/fast-classifier
+cp -rv ../immortalwrt/package/kernel/fast-classifier package/new/fast-classifier
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/new/shortcut-fe
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsproxy package/new/dnsproxy
 #svn export  https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/new/dnsforwarder
