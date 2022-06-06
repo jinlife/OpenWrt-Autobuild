@@ -39,6 +39,13 @@ CONFIG_PACKAGE_luci-app-ikoolproxy=y
 # CONFIG_DOCKER_STO_BTRFS=y
 # CONFIG_DOCKER_STO_EXT4=y
 
+# USB 3.0
+CONFIG_PACKAGE_kmod-usb-ohci=y
+CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+CONFIG_PACKAGE_kmod-usb2=y
+CONFIG_PACKAGE_kmod-usb2-pci=y
+CONFIG_PACKAGE_kmod-usb3=y
+
 CONFIG_OPENSSL_OPTIMIZE_SPEED=y
 CONFIG_OPENSSL_WITH_SM234=y
 CONFIG_PACKAGE_addition-default-settings=y
