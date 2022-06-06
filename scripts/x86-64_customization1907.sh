@@ -18,6 +18,7 @@ wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/
 wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 popd
 pushd package/base-files/files/etc
+rm -rf rc.common
 wget https://github.com/Lienol/openwrt/raw/19.07/package/base-files/files/etc/rc.common
 popd
 
