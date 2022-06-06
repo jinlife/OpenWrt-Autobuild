@@ -30,8 +30,8 @@ wget -P target/linux/generic/hack-5.4/ https://github.com/immortalwrt/immortalwr
 cp -rf ../default-settings package/new/lean-translate
 
 ZZZ="package/new/lean-translate/files/zzz-default-settings"
-# Modify machine name to OpenWrt-X86
-sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X86'" $ZZZ
+# Modify machine name to OpenWrt-R2S
+sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-R2S'" $ZZZ
 # Customized name
 sed -i "s/OpenWrt /Jinlife build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
 
