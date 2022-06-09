@@ -123,7 +123,6 @@ cp -rf ../luci-app-xlnetacc package/new/luci-app-xlnetacc
 # Edge Theme
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-edge package/new/luci-theme-edge
 #git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
-git clone -b master https://github.com/jerrykuku/luci-theme-argon.git package/new/luci-theme-argon
 
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
