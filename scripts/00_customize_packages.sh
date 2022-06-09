@@ -121,7 +121,8 @@ svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/vl
 cp -rf ../luci-app-xlnetacc package/new/luci-app-xlnetacc
 
 # Edge Theme
-git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-theme-edge package/new/luci-theme-edge
+#git clone -b master https://github.com/kiddin9/luci-theme-edge.git package/new/luci-theme-edge
 
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
