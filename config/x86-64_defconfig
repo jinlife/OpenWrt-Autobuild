@@ -10,6 +10,7 @@ CONFIG_GCC_USE_VERSION_10=y
 CONFIG_GRUB_TIMEOUT="1"
 CONFIG_LUCI_SRCDIET=y
 
+CONFIG_PACKAGE_luci-theme-neobird=y
 CONFIG_PACKAGE_luci-theme-openwrt-2020=y
 CONFIG_PACKAGE_luci-theme-edge=n
 CONFIG_PACKAGE_luci-app-poweroff=y
