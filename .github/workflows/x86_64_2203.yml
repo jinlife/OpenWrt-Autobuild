@@ -58,8 +58,8 @@ jobs:
       run: |
         cp ../scripts/00_customize_packages.sh .
         /bin/bash 00_customize_packages.sh
-        cp ../scripts/x86-64_customization.sh .
-        /bin/bash x86-64_customization.sh
+        cp ../scripts/x86-64_customization2203.sh .
+        /bin/bash x86-64_customization2203.sh
 
     - name: Convert Translation
       working-directory: ./openwrt
