@@ -1,4 +1,4 @@
-name: X86-64 Generic
+name: X86-64 Generic 2203
 
 on:
   repository_dispatch:
