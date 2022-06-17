@@ -14,6 +14,12 @@ cp -rv ../immortalwrt/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
 # Realtek 8812BU/8822BU
 cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
 
+# Openwrt 22.03 TurboAcc Shortcut-FE
+pushd target/linux/generic/hack-5.10
+wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
+wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+popd
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
