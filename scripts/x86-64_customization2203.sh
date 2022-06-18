@@ -20,6 +20,10 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5
 wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 popd
 
+# UPNP
+rm -rf ./feeds/packages/net/miniupnpd
+svn export https://github.com/openwrt/packages/branches/openwrt-22.03/net/miniupnpd feeds/packages/net/miniupnpd
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
