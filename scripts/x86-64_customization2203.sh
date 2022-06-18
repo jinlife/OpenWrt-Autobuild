@@ -21,6 +21,9 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5
 popd
 
 # UPNP
+rm -rf ./feeds/luci/applications/luci-app-upnp
+svn export https://github.com/openwrt/luci/branches/openwrt-22.03/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
 rm -rf ./feeds/packages/net/miniupnpd
 svn export https://github.com/openwrt/packages/branches/openwrt-22.03/net/miniupnpd feeds/packages/net/miniupnpd
 
