@@ -5,12 +5,6 @@ cp -rf ../immortalwrt/package/emortal/autocore package/new/
 # grant getCPUUsage access
 sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
 
-# Realtek RTL8811CU/RTL8821CU
-svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8821cu package/new/rtl8821cu
-
-# Realtek 8812BU/8822BU
-svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl88x2bu package/new/rtl88x2bu
-
 # Openwrt 22.03 TurboAcc Shortcut-FE
 pushd target/linux/generic/hack-5.10
 wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
