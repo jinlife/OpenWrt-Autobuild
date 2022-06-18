@@ -6,10 +6,10 @@ cp -rf ../immortalwrt/package/emortal/autocore package/new/
 sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
 
 # Realtek RTL8811CU/RTL8821CU
-cp -rv ../immortalwrt/package/kernel/rtl8821cu package/new/rtl8821cu
+svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8821cu package/new/rtl8821cu
 
 # Realtek 8812BU/8822BU
-cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
+svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl88x2bu package/new/rtl88x2bu
 
 # Openwrt 22.03 TurboAcc Shortcut-FE
 pushd target/linux/generic/hack-5.10
