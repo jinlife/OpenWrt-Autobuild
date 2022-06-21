@@ -5,6 +5,13 @@ cp -rf ../immortalwrt/package/emortal/autocore package/new/
 # grant getCPUUsage access
 sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
 
+# UPNP
+rm -rf ./feeds/luci/applications/luci-app-upnp
+svn export https://github.com/openwrt/luci/branches/openwrt-22.03/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
+rm -rf ./feeds/packages/net/miniupnpd
+svn export https://github.com/openwrt/packages/branches/openwrt-22.03/net/miniupnpd feeds/packages/net/miniupnpd
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
