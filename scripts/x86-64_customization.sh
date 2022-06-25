@@ -5,15 +5,6 @@ cp -rf ../immortalwrt/package/emortal/autocore package/new/
 # grant getCPUUsage access
 sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
 
-# Realtek RTL8811CU/RTL8821CU
-cp -rv ../immortalwrt/package/kernel/rtl8821cu package/new/rtl8821cu
-
-# Realtek RTL8812AU/21AU
-cp -rv ../immortalwrt/package/kernel/rtl8812au-ac package/new/rtl8812au-ac
-
-# Realtek 8812BU/8822BU
-cp -rv ../immortalwrt/package/kernel/rtl88x2bu package/new/rtl88x2bu
-
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
