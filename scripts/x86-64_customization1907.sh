@@ -22,6 +22,12 @@ rm -rf rc.common
 wget https://github.com/Lienol/openwrt/raw/19.07/package/base-files/files/etc/rc.common
 popd
 
+rm -rf feeds/luci/applications/luci-app-turboacc
+rm -rf package/new/shortcut-fe
+svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
+svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/shortcut-fe package/new/shortcut-fe
+svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/fast-classifier package/new/fast-classifier
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
