@@ -12,6 +12,12 @@ ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-
 rm -rf ./feeds/packages/net/miniupnpd
 svn export https://github.com/openwrt/packages/branches/openwrt-22.03/net/miniupnpd feeds/packages/net/miniupnpd
 
+# Openwrt 22.03 TurboAcc Shortcut-FE
+pushd target/linux/generic/hack-5.10
+wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/952-net-conntrack-events-support-multiple-registrant.patch
+wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.10/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+popd
+
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
