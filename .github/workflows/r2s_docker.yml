@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Clone Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: master
 
@@ -41,7 +41,7 @@ jobs:
         git clone -b $REPO_TAG $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         name_tag=${REPO_TAG}-r2s-docker-r$(date +%g.%j)
-        echo ::set-output name=release_tag::$name_tag
+        echo "release_tag=$name_tag" >> $GITHUB_OUTPUT
 
     - name: Clone immortalwrt
       run: |
@@ -106,7 +106,7 @@ jobs:
         popd
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ steps.co.outputs.release_tag }}
         path: artifact/*
