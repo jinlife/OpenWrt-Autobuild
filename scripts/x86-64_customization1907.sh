@@ -12,22 +12,6 @@ ln -sf ../../../feeds/packages/libs/libcap ./package/feeds/packages/libcap
 svn export https://github.com/openwrt/packages/branches/openwrt-21.02/libs/libcap-ng feeds/packages/libs/libcap-ng
 ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 
-# Openwrt 19.07 TurboAcc Shortcut-FE
-pushd target/linux/generic/hack-4.14
-wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/952-net-conntrack-events-support-multiple-registrant.patch
-wget https://github.com/Lienol/openwrt/raw/19.07/target/linux/generic/hack-4.14/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
-popd
-pushd package/base-files/files/etc
-rm -rf rc.common
-wget https://github.com/Lienol/openwrt/raw/19.07/package/base-files/files/etc/rc.common
-popd
-
-rm -rf feeds/luci/applications/luci-app-turboacc
-rm -rf package/new/shortcut-fe
-svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
-svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/shortcut-fe package/new/shortcut-fe
-svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/fast-classifier package/new/fast-classifier
-
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate
 #net.netfilter.nf_conntrack_max from 16384 to 65535
