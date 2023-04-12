@@ -17,20 +17,6 @@ git clone https://github.com/yaof-project/luci-app-ikoolproxy.git package/new/lu
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc feeds/luci/applications/luci-app-turboacc
 ln -sf ../../../feeds/luci/applications/luci-app-turboacc ./package/feeds/luci/luci-app-turboacc
 
-# Patch Kernel with SFE https://github.com/zxcvbnmv/zxcvbnm-openwrt/blob/master/scripts/02_r4s_prepare_package.sh
-# Openwrt 21.02
-pushd target/linux/generic/hack-5.4
-#wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
-#wget https://github.com/immortalwrt/immortalwrt/raw/openwrt-21.02/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
-wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
-wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
-popd
-
-# https://github.com/imy7/luci-app-turboacc/tree/main/Lean
-#svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/shortcut-fe package/new/shortcut-fe
-#svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-21.02/package/kernel/fast-classifier package/new/fast-classifier
-svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/new/shortcut-fe
-
 # arpbind
 svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-arpbind feeds/luci/applications/luci-app-arpbind
 ln -sf ../../../feeds/luci/applications/luci-app-arpbind ./package/feeds/luci/luci-app-arpbind
@@ -105,12 +91,6 @@ svn export https://github.com/immortalwrt/luci/branches/openwrt-21.02/applicatio
 ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
 rm -rf ./feeds/packages/net/miniupnpd
 svn export https://github.com/openwrt/packages/branches/openwrt-21.02/net/miniupnpd feeds/packages/net/miniupnpd
-
-# upx & ucl
-svn export https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-svn export https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
-sed -i '/builddir dependencies/i\tools-y += ucl upx' tools/Makefile
-sed -i '/builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 
 # USB Printer
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer feeds/luci/applications/luci-app-usb-printer
