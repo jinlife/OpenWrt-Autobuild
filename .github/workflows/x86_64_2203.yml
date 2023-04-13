@@ -100,7 +100,7 @@ jobs:
         mv openwrt/bin/targets/x86/64 ./artifact
         pushd artifact
         cat config.buildinfo
-        rm -rf packages *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums *.bin *-combined.img.gz
+        rm -rf packages *.buildinfo *.manifest *rootfs* *-vmlinuz sha256sums *.bin *-combined.img.gz *.json
         popd
 
     - name: Upload Artifact
