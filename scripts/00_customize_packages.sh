@@ -65,6 +65,9 @@ rm -rf ./feeds/packages/net/shadowsocks-libev
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/new/luci-app-ssr-plus
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/dns2socks package/new/dns2socks
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/ipt2socks package/new/ipt2socks
+# Fix hash issue
+sed -i "s/73a2498dc95934c225d358707e7f7d060b5ce81aa45260ada09cbd15207d27d1/5279eb1cb7555cf9292423cc9f672dc43e6e214b3411a6df26a6a1cfa59d88b7/g" package/new/ipt2socks/Makefile
+
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/kcptun package/new/kcptun
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/microsocks package/new/microsocks
 svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/pdnsd-alt package/new/pdnsd-alt
