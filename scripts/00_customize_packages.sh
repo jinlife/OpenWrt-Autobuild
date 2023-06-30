@@ -120,10 +120,12 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-socat packag
 # Add r8125 realtek network card driver
 # svn export https://github.com/Lienol/openwrt/branches/19.07/package/kernel/r8125 package/new/r8125
 # svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/r8125 package/new/r8125
-cp -rf ../r8125 package/new/r8125
+svn export https://github.com/jinlife/unraid-r8125-r8152-driver/trunk/r8125 package/new/r8125
+#cp -rf ../r8125 package/new/r8125
 
 #svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
-cp -rf ../r8152 package/new/r8152
+svn export https://github.com/jinlife/unraid-r8125-r8152-driver/trunk/r8152 package/new/r8152
+#cp -rf ../r8152 package/new/r8152
 cp -rf package/new/r8152/patches/100-add-LED-configuration-from-OF.patch package/new/r8152/src
 pushd package/new/r8152/src
 git apply 100-add-LED-configuration-from-OF.patch && rm 100-add-LED-configuration-from-OF.patch
