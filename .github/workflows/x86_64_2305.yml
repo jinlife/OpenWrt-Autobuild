@@ -1,4 +1,4 @@
-name: X86-64 2203 Generic
+name: X86-64 2305 Generic
 
 on:
   repository_dispatch:
@@ -37,7 +37,7 @@ jobs:
       id: co
       run: |
         REPO_URL=https://github.com/openwrt/openwrt
-        REPO_TAG=v22.03.6
+        REPO_TAG=v23.05.2
         git clone -b $REPO_TAG $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         name_tag=${REPO_TAG}-r$(date +%g.%j)
@@ -45,7 +45,7 @@ jobs:
 
     - name: Clone immortalwrt
       run: |
-        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/immortalwrt
+        git clone -b openwrt-23.05 --depth 1 --single-branch https://github.com/immortalwrt/immortalwrt
 
     - name: Feeds update
       working-directory: ./openwrt
@@ -58,8 +58,8 @@ jobs:
       run: |
         cp ../scripts/00_customize_packages.sh .
         /bin/bash 00_customize_packages.sh
-        cp ../scripts/x86-64_customization2203.sh .
-        /bin/bash x86-64_customization2203.sh
+        cp ../scripts/x86-64_customization2305.sh .
+        /bin/bash x86-64_customization2305.sh
 
     - name: Convert Translation
       working-directory: ./openwrt
@@ -80,7 +80,7 @@ jobs:
         rm -rf golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
         popd
         ./scripts/feeds install luci-app-passwall
-        cp ../config/x86-64_2203_defconfig .config
+        cp ../config/x86-64_2305_defconfig .config
         make defconfig
 
     - name: Make Download
