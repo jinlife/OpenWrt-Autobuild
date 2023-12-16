@@ -56,8 +56,8 @@ jobs:
     - name: Customize Packages
       working-directory: ./openwrt
       run: |
-        cp ../scripts/00_customize_packages.sh .
-        /bin/bash 00_customize_packages.sh
+        cp ../scripts/00_customize_packages2305.sh .
+        /bin/bash 00_customize_packages2305.sh
         cp ../scripts/x86-64_customization2305.sh .
         /bin/bash x86-64_customization2305.sh
 
