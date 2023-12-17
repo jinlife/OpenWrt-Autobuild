@@ -36,7 +36,7 @@ ln -sf ../../../feeds/luci/libs/luci-lib-fs ./package/feeds/luci/luci-lib-fs
 
 # FullCone
 cp -rv ../immortalwrt/package/network/utils/fullconenat package/network/utils/fullconenat
-cp -v ../immortalwrt/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.4/
+#cp -v ../immortalwrt/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.4/
 patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
 cp -rv ../immortalwrt/package/network/config/firewall/patches package/network/config/firewall/
 
