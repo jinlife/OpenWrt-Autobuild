@@ -144,6 +144,10 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-socat packag
 # svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/r8125 package/new/r8125
 svn export https://github.com/jinlife/unraid-r8125-r8152-driver/trunk/r8125 package/new/r8125
 #cp -rf ../r8125 package/new/r8125
+cp -f ../patches/200-fix-openwrt-23.05.patch package/new/r8125/src
+pushd package/new/r8125/src
+git apply 200-fix-openwrt-23.05.patch && rm 200-fix-openwrt-23.05.patch
+popd
 
 #svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06/package/kernel/r8152 package/new/r8152
 svn export https://github.com/jinlife/unraid-r8125-r8152-driver/trunk/r8152 package/new/r8152
