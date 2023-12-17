@@ -19,6 +19,7 @@ sed -i 's#net.netfilter.nf_conntrack_max=16384#net.netfilter.nf_conntrack_max=65
 
 # default settings and translate
 cp -rf ../default-settings package/new/lean-translate
+mv -f package/new/lean-translate/Makefile2305 package/new/lean-translate/Makefile
 
 ZZZ="package/new/lean-translate/files/zzz-default-settings"
 # Modify machine name to OpenWrt-X86
