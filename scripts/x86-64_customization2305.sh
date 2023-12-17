@@ -27,6 +27,7 @@ sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-X86'" $
 sed -i "s/OpenWrt /Jinlife build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
 
 echo '
+CONFIG_CRYPTO_GHASH=y
 CONFIG_CRYPTO_CHACHA20_X86_64=y
 CONFIG_CRYPTO_POLY1305_X86_64=y
 ' >> ./target/linux/x86/64/config-5.15

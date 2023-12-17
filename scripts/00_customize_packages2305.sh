@@ -34,11 +34,34 @@ ln -sf ../../../feeds/luci/applications/luci-app-filetransfer ./package/feeds/lu
 svn export https://github.com/immortalwrt/luci/branches/openwrt-23.05/libs/luci-lib-fs feeds/luci/libs/luci-lib-fs
 ln -sf ../../../feeds/luci/libs/luci-lib-fs ./package/feeds/luci/luci-lib-fs
 
-# FullCone
-cp -rv ../immortalwrt/package/network/utils/fullconenat package/network/utils/fullconenat
-#cp -v ../immortalwrt/target/linux/generic/hack-5.15/952-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.15/
+# FullCone nat for nftables
+# patch kernel
+#cp -f ../lede/target/linux/generic/hack-5.15/952-add-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-5.15/
+#cp -f ../lede/target/linux/generic/hack-6.1/952-add-net-conntrack-events-support-multiple-registrant.patch target/linux/generic/hack-6.1/
+# https://github.com/coolsnowwolf/lede/issues/11211
+#sed -i 's|CONFIG_WERROR=y|# CONFIG_WERROR is not set|g' target/linux/generic/config-5.15
+#sed -i 's|CONFIG_WERROR=y|# CONFIG_WERROR is not set|g' target/linux/generic/config-6.1
+curl -sSL https://github.com/coolsnowwolf/lede/files/11473486/952-add-net-conntrack-events-support-multiple-registrant.patch -o target/linux/generic/hack-5.15/952-add-net-conntrack-events-support-multiple-registrant.patch
+curl -sSL https://github.com/coolsnowwolf/lede/files/11473487/952-add-net-conntrack-events-support-multiple-registrant.patch -o target/linux/generic/hack-6.1/952-add-net-conntrack-events-support-multiple-registrant.patch
+cp -f ../lede/target/linux/generic/hack-5.15/982-add-bcm-fullconenat-support.patch target/linux/generic/hack-5.15/
+cp -f ../lede/target/linux/generic/hack-6.1/982-add-bcm-fullconenat-support.patch target/linux/generic/hack-6.1/
+# fullconenat-nft
+cp -rf ../immortalwrt/package/network/utils/fullconenat-nft package/network/utils/
+# libnftnl
+rm -rf ./package/libs/libnftnl
+cp -rf ../immortalwrt/package/libs/libnftnl package/libs/
+# nftables
+rm -rf ./package/network/utils/nftables/
+cp -rf ../immortalwrt/package/network/utils/nftables package/network/utils/
+# firewall4
+rm -rf ./package/network/config/firewall4
+cp -rf ../immortalwrt/package/network/config/firewall4 package/network/config/
+# patch luci
 patch -d feeds/luci -p1 -i ../../../patches/fullconenat-luci.patch
-cp -rv ../immortalwrt/package/network/config/firewall/patches package/network/config/firewall/
+
+# mbedtls
+rm -rf ./package/libs/mbedtls
+cp -rf ../immortalwrt/package/libs/mbedtls package/libs/
 
 # Release Ram
 svn export https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-ramfree feeds/luci/applications/luci-app-ramfree
@@ -81,8 +104,7 @@ svn export https://github.com/fw876/helloworld/trunk/tcping package/new/tcping
 svn export https://github.com/fw876/helloworld/trunk/trojan package/new/trojan
 svn export https://github.com/fw876/helloworld/trunk/v2ray-plugin package/new/v2ray-plugin
 svn export https://github.com/fw876/helloworld/trunk/xray-core package/new/xray-core
-# building ssr-libev with libmbedtls
-patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.patch
+
 
 # Traffic Usage Monitor
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
