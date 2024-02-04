@@ -55,9 +55,9 @@ jobs:
         git clone -b master --depth 1 --single-branch https://github.com/coolsnowwolf/lede coolsnowwolf-lede
         git clone -b master --depth 1 --single-branch https://github.com/coolsnowwolf/luci coolsnowwolf-luci
         git clone -b master --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
-        rm -rf openwrt/feeds/packages/lang/golang
+        rm -rfv openwrt/feeds/packages/lang/golang
         cp -rfv openwrt-packages/lang/golang openwrt/feeds/packages/lang/golang
-        rm -rf openwrt-packages
+        rm -rfv openwrt-packages
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
 
     - name: Feeds update
