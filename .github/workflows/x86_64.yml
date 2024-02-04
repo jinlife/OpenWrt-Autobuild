@@ -48,13 +48,17 @@ jobs:
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/immortalwrt immortalwrt
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/packages immortalwrt-packages
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/luci immortalwrt-luci
-        git clone -b master --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
         git clone -b master --depth 1 --single-branch https://github.com/fw876/helloworld helloworld
         git clone -b main --depth 1 --single-branch https://github.com/jinlife/unraid-r8125-r8152-driver unraid-r8125-r8152-driver
         git clone -b master --depth 1 --single-branch https://github.com/kiddin9/openwrt-packages kiddin9-openwrt-packages
         git clone -b main --depth 1 --single-branch https://github.com/Lienol/openwrt-package Lienol-openwrt-packages
         git clone -b master --depth 1 --single-branch https://github.com/coolsnowwolf/lede coolsnowwolf-lede
         git clone -b master --depth 1 --single-branch https://github.com/coolsnowwolf/luci coolsnowwolf-luci
+        git clone -b master --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
+        rm -rf openwrt/feeds/packages/lang/golang
+        cp -rfv openwrt-packages/lang/golang openwrt/feeds/packages/lang/golang
+        rm -rf openwrt-packages
+        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages ../openwrt-packages
 
     - name: Feeds update
       working-directory: ./openwrt
@@ -85,13 +89,6 @@ jobs:
     - name: Make Config
       working-directory: ./openwrt
       run: |
-        #pushd feeds/packages/lang
-        #rm -rf golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
-        #popd
-        rm -rf feeds/packages/lang/golang
-        cp -rfv ../openwrt-packages/lang/golang feeds/packages/lang/golang
-        rm -rf ../openwrt-packages
-        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages ../openwrt-packages
         ./scripts/feeds install luci-app-passwall
         cp ../config/x86-64_defconfig .config
         make defconfig
