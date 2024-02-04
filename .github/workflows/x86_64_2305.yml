@@ -85,7 +85,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         rm -rf feeds/packages/lang/golang
-        cp -rf ../openwrt-packages/lang/golang feeds/packages/lang/golang
+        cp -rfv ../openwrt-packages/lang/golang feeds/packages/lang/golang
         ./scripts/feeds install luci-app-passwall
         cp ../config/x86-64_2305_defconfig .config
         make defconfig

@@ -48,7 +48,7 @@ jobs:
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/immortalwrt immortalwrt
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/packages immortalwrt-packages
         git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/immortalwrt/luci immortalwrt-luci
-        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
+        git clone -b master --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
         git clone -b master --depth 1 --single-branch https://github.com/fw876/helloworld helloworld
         git clone -b main --depth 1 --single-branch https://github.com/jinlife/unraid-r8125-r8152-driver unraid-r8125-r8152-driver
         git clone -b master --depth 1 --single-branch https://github.com/kiddin9/openwrt-packages kiddin9-openwrt-packages
@@ -89,7 +89,9 @@ jobs:
         #rm -rf golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
         #popd
         rm -rf feeds/packages/lang/golang
-        cp -rf ../openwrt-packages/lang/golang feeds/packages/lang/golang
+        cp -rfv ../openwrt-packages/lang/golang feeds/packages/lang/golang
+        rm -rf ../openwrt-packages
+        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages ../openwrt-packages
         ./scripts/feeds install luci-app-passwall
         cp ../config/x86-64_defconfig .config
         make defconfig
