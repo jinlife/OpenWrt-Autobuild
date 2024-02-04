@@ -57,7 +57,7 @@ jobs:
         rm -rf openwrt/feeds/packages/lang/golang
         cp -rfv openwrt-packages/lang/golang openwrt/feeds/packages/lang/golang
         rm -rf openwrt-packages
-        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages ../openwrt-packages
+        git clone -b openwrt-21.02 --depth 1 --single-branch https://github.com/openwrt/packages openwrt-packages
 
     - name: Feeds update
       working-directory: ./openwrt
