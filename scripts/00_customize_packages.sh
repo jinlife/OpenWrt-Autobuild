@@ -83,6 +83,9 @@ cp -rfv ../helloworld/trojan package/new/trojan
 cp -rfv ../helloworld/v2ray-plugin package/new/v2ray-plugin
 cp -rfv ../helloworld/xray-core package/new/xray-core
 
+#https://github.com/fw876/helloworld/issues/1394
+sed -i 's/ +libopenssl-legacy//g' package/new/shadowsocksr-libev/Makefile
+
 # mbedtls
 rm -rf ./package/libs/mbedtls
 cp -rfv ../immortalwrt/package/libs/mbedtls package/libs/
