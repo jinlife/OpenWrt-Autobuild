@@ -2,14 +2,14 @@
 
 # AutoCore
 # Commits on Feb 19, 2022 https://github.com/immortalwrt/immortalwrt/tree/1572743ad6e3c60cb088e47c769c17269caf2b38/package/emortal/autocore
-cp -rf ../autocore package/new/autocore
+cp -rfv ../autocore package/new/autocore
 
 # For 1907 passwall and miniupnp
 rm -rf feeds/packages/libs/libcap
 rm -rf feeds/packages/libs/libcap-ng
-svn export https://github.com/openwrt/packages/branches/openwrt-21.02/libs/libcap feeds/packages/libs/libcap
+cp -rfv ../openwrt-packages/libs/libcap feeds/packages/libs/libcap
 ln -sf ../../../feeds/packages/libs/libcap ./package/feeds/packages/libcap
-svn export https://github.com/openwrt/packages/branches/openwrt-21.02/libs/libcap-ng feeds/packages/libs/libcap-ng
+cp -rfv ../openwrt-packages/libs/libcap-ng feeds/packages/libs/libcap-ng
 ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 
 #Default IP
@@ -18,7 +18,7 @@ sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generat
 sed -i 's#net.netfilter.nf_conntrack_max=16384#net.netfilter.nf_conntrack_max=65535#g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 # default settings and translate
-cp -rf ../default-settings package/new/lean-translate
+cp -rfv ../default-settings package/new/lean-translate
 
 ZZZ="package/new/lean-translate/files/zzz-default-settings"
 # Modify machine name to OpenWrt-X86

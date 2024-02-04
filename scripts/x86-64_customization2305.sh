@@ -7,10 +7,10 @@ sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/n
 
 # UPNP
 rm -rf ./feeds/luci/applications/luci-app-upnp
-svn export https://github.com/openwrt/luci/branches/openwrt-23.05/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+cp -rfv ../openwrt-luci/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
 ln -sf ../../../feeds/luci/applications/luci-app-upnp ./package/feeds/luci/luci-app-upnp
 rm -rf ./feeds/packages/net/miniupnpd
-svn export https://github.com/openwrt/packages/branches/openwrt-23.05/net/miniupnpd feeds/packages/net/miniupnpd
+cp -rfv ../openwrt-packages/net/miniupnpd feeds/packages/net/miniupnpd
 
 #Default IP
 sed -i 's#192.168.1.1#192.168.0.1#g' package/base-files/files/bin/config_generate

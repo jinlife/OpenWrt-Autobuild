@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AutoCore
-cp -rf ../immortalwrt/package/emortal/autocore package/new/
+cp -rfv ../immortalwrt/package/emortal/autocore package/new/
 # grant getCPUUsage access
 sed -i 's|"getTempInfo"|"getTempInfo", "getCPUBench", "getCPUUsage"|g' package/new/autocore/files/generic/luci-mod-status-autocore.json
 
