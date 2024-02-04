@@ -83,8 +83,9 @@ cp -rfv ../helloworld/trojan package/new/trojan
 cp -rfv ../helloworld/v2ray-plugin package/new/v2ray-plugin
 cp -rfv ../helloworld/xray-core package/new/xray-core
 
-# building ssr-libev with libmbedtls
-patch -d package/new -p1 -i ../../../patches/building-ssr-libev-with-libmbedtls.patch
+# mbedtls
+rm -rf ./package/libs/mbedtls
+cp -rfv ../immortalwrt/package/libs/mbedtls package/libs/
 
 # Traffic Usage Monitor
 git clone -b master --depth 1 --single-branch https://github.com/brvphoenix/wrtbwmon package/new/wrtbwmon
