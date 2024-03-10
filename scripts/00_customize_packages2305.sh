@@ -135,6 +135,9 @@ cp -rfv ../kiddin9-openwrt-packages/luci-theme-edge package/new/luci-theme-edge
 # poweroff
 git clone -b master https://github.com/esirplayground/luci-app-poweroff package/new/luci-app-poweroff
 
+# eqosplus 
+git clone -b main https://github.com/sirpdboy/luci-app-eqosplus package/new/luci-app-eqosplus
+
 # Socat IPv6 to IPv4
 cp -rfv ../Lienol-openwrt-packages/luci-app-socat package/new/luci-app-socat
 
