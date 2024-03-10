@@ -11,6 +11,7 @@ CONFIG_LUCI_SRCDIET=y
 
 CONFIG_PACKAGE_luci-theme-edge=y
 CONFIG_PACKAGE_luci-app-poweroff=y
+CONFIG_PACKAGE_luci-app-eqosplus=y
 CONFIG_PACKAGE_luci-app-socat=y
 CONFIG_PACKAGE_kmod-r8125=y
 CONFIG_PACKAGE_curl=y
